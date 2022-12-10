@@ -4,6 +4,7 @@
     grid-template-columns: auto auto;
     align-items: center;
     padding: 15px 0px;
+    padding-left: 5px;
 }
 
 #profile_pic{

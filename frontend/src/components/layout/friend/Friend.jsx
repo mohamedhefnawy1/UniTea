@@ -12,7 +12,7 @@ const Friend = () => {
                     <img id="profile_pic" src={Profile_pic} alt="" />
                 </a>
             </div>
-            <a href="/" id="friend_username">Mohamed Elhefnawy</a>
+            <a href="/" id="friend_username">User</a>
         </div>
     );
 };

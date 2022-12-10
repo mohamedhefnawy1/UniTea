@@ -2,3 +2,15 @@
     display:grid;
     grid-template-columns: 1fr 200px;
 }
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .post_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+

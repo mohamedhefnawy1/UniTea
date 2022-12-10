@@ -10,8 +10,11 @@ const Feed = () => {
         
         <div className='row'>
             <div className="col-8">
-                <Post_feed />
+                <div className="post_container d-flex justify-content-center">
+                    <Post_feed />  
+                </div>
             </div>
+            
             <div className="col-4">
                 <Sidebar />
             </div>

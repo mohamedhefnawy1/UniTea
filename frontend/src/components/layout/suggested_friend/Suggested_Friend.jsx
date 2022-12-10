@@ -7,7 +7,7 @@ function Untitled(props) {
       <ImageRow>
         <Image src={require("../../../assets/profile_pic.png")}></Image>
         <User01>User01</User01>
-        <Follow>Follow</Follow>
+        {/* <Follow>Follow</Follow> */}
       </ImageRow>
     </Rect>
   );
