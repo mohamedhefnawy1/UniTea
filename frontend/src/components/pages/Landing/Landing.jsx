@@ -11,7 +11,7 @@ const Landing = () => {
         <div className='landing'>
             <Navbar bg="primary" variant="light">
                 <Container>
-                <Navbar.Brand href="#home">UniTea</Navbar.Brand>
+                <Navbar.Brand href="/">UniTea</Navbar.Brand>
                 <Nav>
                     <Nav.Link href="/logIn">
                         <Button variant="outlined-primary">Login</Button>
@@ -29,7 +29,7 @@ const Landing = () => {
                 <div className='landing-box3'></div>
             </div>
             <div className='landing-text'>
-                Stand out and reach other students with UniTEA's student focused social media app
+                Stand out and reach other students with UniTEA's student-focused social media app
             </div>
             </body>
         </div>
