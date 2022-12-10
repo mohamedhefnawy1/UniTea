@@ -5,7 +5,7 @@ function Untitled(props) {
   return (
     <Rect>
       <ImageRow>
-        <Image src={require("../assets/images/image_w13p..png")}></Image>
+        <Image src={require("../../../assets/profile_pic.png")}></Image>
         <User01>User01</User01>
         <Follow>Follow</Follow>
       </ImageRow>
@@ -14,13 +14,13 @@ function Untitled(props) {
 }
 
 const Rect = styled.div`
-  display: flex;
-  width: 175px;
-  height: 46px;
-  background-color: #E6E6E6;
-  flex-direction: row;
-  margin-top: 261px;
-  margin-left: 635px;
+  // display: flex;
+  // width: 175px;
+  // height: 46px;
+  // background-color: #E6E6E6;
+  // flex-direction: row;
+  // margin-top: 261px;
+  // margin-left: 635px;
 `;
 
 const Image = styled.img`

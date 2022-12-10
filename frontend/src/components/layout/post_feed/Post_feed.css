@@ -1,10 +1,78 @@
 .main_holder{
     height: auto;
     width: auto;
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
 }
+
+.post_head{
+    display:grid;
+    grid-template-columns: auto auto;
+}
+
+.post_username{
+    padding: 10px 30px;
+}
+
+#posted_img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#like_button{
+    background: none;
+    border: none;
+}
+
+#like_img{
+    width: 32px;
+    height: 25px;
+}
+/* 
+.post_body{
+    width: fit-content;
+    height:fit-content;
+} */
+
 .post_footer{
     width: auto;
     height: auto;
-    background-color: brown;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#comment_box{
+    max-width: 250px;
+    border-radius: 10px;
+    border-style:solid;
+    padding-left: 10px;
+    position: relative;
+    left: 30px
+}
+
+.footerInfoHolder{
+    display: flex;
+    align-items: center;
+}
+
+.numberOfLikes{
+    color: #007471;
+    font-weight: 500;
+    padding-right: 20px;
+}
+
+.numberOfComments{
+    color: #007471;
+    font-weight: 500;
+}
+
+
+
+/* --------------------------------------------------------------------- */
+@media screen and (max-width: 550px) {
+    #comment_box{
+        left: 10px;
+        max-width: 150px;
+        font-size: small;
+    }
 }

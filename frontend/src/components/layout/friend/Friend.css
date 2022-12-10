@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
+    padding: 15px 0px;
 }
 
 #profile_pic{
@@ -16,5 +17,6 @@
 #friend_username{
     padding-left: 10px;
     text-decoration: none;
+    font-size: 14px;
     color: black;
 }

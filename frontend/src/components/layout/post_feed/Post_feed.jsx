@@ -2,6 +2,7 @@ import React from 'react'
 import './Post_feed.css'
 
 import like_button from '../../../assets/like.png'
+import Post1 from '../../../assets/post1.jpg'
 
 import Friend from '../friend/Friend';
 import Comment from '../comment/Comment'
@@ -9,22 +10,26 @@ import Comment from '../comment/Comment'
 const Post_feed = () => {
 
     return(
-        <div className="main_holder">
+        <div class="main_holder">
             <div className='post_head'>
-                <Friend id='userBox' />
-                <button id='like_button'><img src={like_button} alt="" /></button>
+                <div className="post_username"><Friend id='userBox' /></div>
+                <button id='like_button'><img id='like_img' src={like_button} alt="" /></button>
             </div>
             <div className='post_body'>
-                <img id='posted_img' src={like_button} alt="" />
+                <img id='posted_img' src={Post1} alt="" />
             </div>
-            <div className='comment_box'>
+            {/* <div className='comment_box'>
                 <Comment id='userComment' />
-            </div>
+            </div> */}
             <div className='post_footer'>
                 {/* <input className="add_comment_box">Add comment</input> */}
-                <input type="text" id="name" name="name" requiredminlength="4" placeholder='Add Comment!' size="10"></input>
-                <div className="numberOfLikes"></div>
-                <div className="numberOfComments"></div>
+                
+                <input type="text" id="comment_box" name="name" requiredminlength="15" placeholder='Add Comment!' size="25"></input>
+                <div className="footerInfoHolder">
+                    <div className="numberOfLikes">Likes</div>
+                    <div className="numberOfComments">Comments</div>
+                </div>
+                
             </div>
         </div>
     );

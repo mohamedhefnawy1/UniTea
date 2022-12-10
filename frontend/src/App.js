@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <Router>
       <Navbar />
-      <Post_feed />
+      {/* <Post_feed /> */}
         <div className='content'>
           <Routes>
             <Route exact path='/' element={<Landing />} />
