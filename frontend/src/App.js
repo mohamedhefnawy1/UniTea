@@ -3,6 +3,7 @@ import  Landing  from './components/pages/Landing/Landing';
 import  LogIn  from './components/pages/LogIn/LogIn';
 import  SignUp  from './components/pages/SignUp/SignUp';
 import  Feed  from './components/pages/Feed/Feed';
+import Friend from './components/layout/friend/Friend';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
       <Router>
       <Navbar />
+      <Friend />
         <div className='content'>
           <Routes>
             <Route exact path='/' element={<Landing />} />
