@@ -4,6 +4,50 @@ $theme-colors: (
   "danger": #ff4136
 );
 
+html {
+  background-color: #028480;
+  font-family: 'Roboto', sans-serif;
+}
+
+.landing-text {
+  position: absolute;
+  bottom: 50%;
+  text-align: center;
+  justify-content: middle;
+  margin-left: 20%;
+  margin-right: 20%;
+
+  color: rgb(1, 28, 0);
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.landing-boxes div{
+  position: absolute;
+  width: 30em;
+  height: 40em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(46, 46, 46, 0.5);
+}
+
+.landing-box1 {
+  top: 20%;
+  left: 4em;
+  background-color: #00706e;
+}
+
+.landing-box2 {
+  top: 25%;
+  left: 30%;
+  background-color: #005c5a;
+}
+
+.landing-box3 {
+  top: 10%;
+  left: 50%;
+  background-color: #004745;
+  z-index: -2;
+}
+
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';// change the theme
-

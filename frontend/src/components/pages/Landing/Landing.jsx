@@ -10,7 +10,7 @@ import './Landing.css'
 const Landing = () => {
 
     return(
-        <>
+        <div className='landing'>
             <Navbar bg="primary" variant="light">
                 <Container>
                 <Navbar.Brand href="#home">UniTea</Navbar.Brand>
@@ -25,12 +25,16 @@ const Landing = () => {
                 </Container>
             </Navbar>
             <body>
+            <div className='landing-boxes'>
+                <div className='landing-box1'></div>
+                <div className='landing-box2'></div>
+                <div className='landing-box3'></div>
+            </div>
             <div className='landing-text'>
                 Stand out and reach other students with UniTEA's student focused social media app
             </div>
             </body>
-            
-        </>
+        </div>
     )
 }
 export default Landing
