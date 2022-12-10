@@ -15,10 +15,10 @@ const Landing = () => {
                 <Container>
                 <Navbar.Brand href="#home">UniTea</Navbar.Brand>
                 <Nav>
-                    <Nav.Link href="#login">
+                    <Nav.Link href="/logIn">
                         <Button variant="outlined-primary">Login</Button>
                     </Nav.Link>
-                    <Nav.Link href="#sign-up">
+                    <Nav.Link href="/signUp">
                         <Button variant="secondary">Sign Up</Button>
                     </Nav.Link>
                 </Nav>
