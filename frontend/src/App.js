@@ -15,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+      <Navbar />
         <div className='content'>
           <Routes>
             <Route exact path='/' element={<Landing />} />

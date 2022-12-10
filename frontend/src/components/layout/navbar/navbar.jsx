@@ -22,7 +22,7 @@ const Navbar = () => {
                         <img className="nav_img" src={Profile_pic} alt="" />
                     </button>
                     <button id="down_btn">
-                        <img className="nav_img" src={Down_btn} alt="" />
+                        <img className="nav_img" id="down_btn" src={Down_btn} alt="" />
                     </button>
                 </div>
             </div>

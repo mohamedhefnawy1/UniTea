@@ -21,6 +21,13 @@
     border: none;
 }
 
+.nav_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 50px;
+}
+
 #nav_profile_btn{
     width: auto;
     height: auto;
@@ -29,13 +36,15 @@
 }
 
 #down_btn{
-    width: auto;
-    height: auto;
+    width: 15px;
+    height: 15px;
     background: none;
     border: none;
+    position: relative;
+    right: 3px;
 }
 
 .nav_img{
-    width: 40px;
-    height:40px;
+    width: 30px;
+    height:30px;
 }
