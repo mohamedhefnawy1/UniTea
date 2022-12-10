@@ -1,0 +1,41 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #007471;
+}
+
+#logo{
+    width: 100px;
+    height: 100px;
+}
+
+#createPost{
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+}
+
+#nav_profile_btn{
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+}
+
+#down_btn{
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+}
+
+.nav_img{
+    width: 40px;
+    height:40px;
+}
