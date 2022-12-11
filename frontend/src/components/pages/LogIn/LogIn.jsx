@@ -7,6 +7,25 @@ import Navbar from 'react-bootstrap/Navbar'
 
 const LogIn = () => {
 
+    const [username, setUsername] = React.useState('');
+    const [password, setPassword] = React.useState('');
+
+    function handleSubmit(event) {
+        event.preventDefault();
+    
+        // fetch("/signUp", {
+        //   method: "POST",
+        //   body: JSON.stringify({ username, password }),
+        //   headers: { "Content-Type": "application/json" }
+        // })
+        //   .then(response => response.json())
+        //   .then(data => {
+        //     console.log(data);
+        //   });
+        
+        console.log(username, password);
+    }
+
     return(
         <>
             <div className='white-bg'></div>
@@ -25,15 +44,23 @@ const LogIn = () => {
             </Navbar>
             <div className='container-title-login'> Login </div>
             <div className='form-container'>
-                <Form className='form'>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" placeholder="Enter email" />
+                <Form className='form' onSubmit={handleSubmit}>
+                    <Form.Group controlId="formBasicUsername">
+                        <Form.Label>Username</Form.Label>
+                        <Form.Control type="text" placeholder="Enter username" value={username} onChange={
+                            (e)=> {
+                                setUsername(e.target.value);
+                            }
+                        }/>
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Control type="password" placeholder="Password" value={password} onChange={
+                            (e)=> {
+                                setPassword(e.target.value);
+                            }
+                        }/>
                     </Form.Group>
 
                     <Button variant="secondary" type="submit">
