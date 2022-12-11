@@ -2,11 +2,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    width: 100vw;    
     background-color: #007471;
+    position: fixed;
+    top: 0px;
+    /* position: absolute; */
+    z-index: 1;
+}
+
+.logo_holder{
+    padding-left: 50px;
 }
 
 #logo{
@@ -19,6 +24,8 @@
     height: auto;
     background: none;
     border: none;
+    outline: none;
+
 }
 
 .nav_buttons{
@@ -33,6 +40,8 @@
     height: auto;
     background: none;
     border: none;
+    outline: none;
+
 }
 
 #down_btn{
@@ -42,6 +51,7 @@
     border: none;
     position: relative;
     right: 3px;
+    outline: none;
 }
 
 .nav_img{

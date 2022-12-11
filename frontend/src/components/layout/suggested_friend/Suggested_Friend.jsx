@@ -5,7 +5,7 @@ function Untitled(props) {
   return (
     <Rect>
       <ImageRow>
-        <Image src={require("../assets/images/image_w13p..png")}></Image>
+        <Image src={require("../../../assets/profile_pic.png")}></Image>
         <User01>User01</User01>
         <Follow>Follow</Follow>
       </ImageRow>
@@ -14,38 +14,36 @@ function Untitled(props) {
 }
 
 const Rect = styled.div`
-  display: flex;
-  width: 175px;
-  height: 46px;
-  background-color: #E6E6E6;
-  flex-direction: row;
-  margin-top: 261px;
-  margin-left: 635px;
+width: fit-content;
+display: grid;
+grid-template-columns: auto auto;
+align-items: center;
+padding: 15px 0px;
+padding-left: 15px;
+
 `;
 
 const Image = styled.img`
-  height: 39px;
-  width: 100%;
-  object-fit: contain;
+max-width: 40px;
 `;
 
 const User01 = styled.span`
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 400;
-  color: #121212;
-  margin-left: 11px;
-  margin-top: 12px;
+padding-left: 5px;
+text-decoration: none;
+font-size: 14px;
+color: black;
+display: flex;
+align-items: center
 `;
 
 const Follow = styled.span`
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 400;
+
   color: rgba(0,116,113,1);
-  font-size: 11px;
-  margin-left: 15px;
-  margin-top: 13px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  justify-content: center;
 `;
 
 const ImageRow = styled.div`

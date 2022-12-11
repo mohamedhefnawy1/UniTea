@@ -1,0 +1,54 @@
+.Sidebar{
+    background-color: #ebebeb;
+    height: 100vh;
+    /* z-index: 1; Stay on top */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    margin-top: 100px;
+    width: 250px;
+    
+}
+
+.user_friends_title{
+    padding-top: 20px;
+    color: rgba(0,116,113,1);
+    text-align: left;
+    padding-left: 10px;
+}
+
+.suggested_friends_title{
+    padding-top: 20px;
+    color: rgba(0,116,113,1);
+    text-align: left;
+    padding-left: 10px;
+}
+
+.user_friends{
+    border-bottom: 2px solid black;
+}
+
+.user_friends{
+    border-bottom: 2px solid black;
+}
+
+/* --------------------------------------------------------------------- */
+@media screen and (max-width: 650px) {
+    .Sidebar{
+        display: none;
+    }
+}
+
+/* --------------------------------------------------------------------- */
+@media screen and (max-width: 770px) {
+    .Sidebar{
+        background-color: #ebebeb;
+        height: 100vh;
+        /* z-index: 1; Stay on top */
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        margin-top: 100px;
+        width: auto;
+    }
+}

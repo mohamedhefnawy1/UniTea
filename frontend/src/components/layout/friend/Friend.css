@@ -1,0 +1,23 @@
+.friend_holder{
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    padding: 15px 0px;
+    padding-left: 20px;
+}
+
+#profile_pic{
+    width: 40px;
+    height:40px;
+}
+.profile_pic{
+    max-width: 40px;
+}
+
+#friend_username{
+    padding-left: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+}
