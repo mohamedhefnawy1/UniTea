@@ -6,7 +6,7 @@ function Index(props) {
     <Button>
       <ButtonOverlay>
         <ImageStack>
-          <Image src={require("./assets/images/image_iWP8..png")}></Image>
+          <Image src={require("../../../assets/search.png")}></Image>
           <Placeholder placeholder=""></Placeholder>
         </ImageStack>
       </ButtonOverlay>

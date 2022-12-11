@@ -2,12 +2,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    width: 100vw;    
     background-color: #007471;
+    position: fixed;
+    top: 0px;
+    /* position: absolute; */
+    z-index: 1;
 }
 
 #logo{

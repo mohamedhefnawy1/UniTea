@@ -7,16 +7,20 @@ import Sidebar from '../../layout/Sidebar/Sidebar';
 const Feed = () => {
 
     return(
-        
-        <div className='row'>
+        <div className='row no-gutters'>
             <div className="col-8">
-                <div className="post_container d-flex justify-content-center">
+                <div className="post_holder d-flex justify-content-center">
                     <Post_feed />  
+                </div>
+                <div className="post_holder d-flex justify-content-center">
+                    <Post_feed />
                 </div>
             </div>
             
             <div className="col-4">
-                <Sidebar />
+                <div className="sidebar_holder d-flex justify-content-end">
+                    <Sidebar />
+                </div>
             </div>
         </div>
     )

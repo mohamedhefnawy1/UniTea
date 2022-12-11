@@ -4,6 +4,8 @@ import  LogIn  from './components/pages/LogIn/LogIn';
 import  SignUp  from './components/pages/SignUp/SignUp';
 import  Feed  from './components/pages/Feed/Feed';
 import Post_feed from './components/layout/post_feed/Post_feed';
+import Sidebar from './components/layout/Sidebar/Sidebar';
+
 
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -18,7 +20,6 @@ function App() {
     <div className="App">
       <Router>
       <Navbar />
-      {/* <Post_feed /> */}
         <div className='content'>
           <Routes>
             <Route exact path='/' element={<Landing />} />

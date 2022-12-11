@@ -1,16 +1,10 @@
-.feed_page_container{
-    display:grid;
-    grid-template-columns: 1fr 200px;
-}
 
 .row{
-    display: flex;
+    display: grid;
+    grid-template-rows: 100px 1fr;
     justify-content: space-between;
 }
 
-/* .post_container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
+body{
+    overflow-x: hidden;
+}

@@ -7,7 +7,7 @@ function Untitled(props) {
       <ImageRow>
         <Image src={require("../../../assets/profile_pic.png")}></Image>
         <User01>User01</User01>
-        {/* <Follow>Follow</Follow> */}
+        <Follow>Follow</Follow>
       </ImageRow>
     </Rect>
   );
@@ -27,18 +27,22 @@ max-width: 40px;
 `;
 
 const User01 = styled.span`
-padding-left: 10px;
+padding-left: 5px;
 text-decoration: none;
 font-size: 14px;
 color: black;
+display: flex;
+align-items: center
 `;
 
 const Follow = styled.span`
 
   color: rgba(0,116,113,1);
-  font-size: 11px;
-  margin-left: 15px;
-  margin-top: 13px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  justify-content: center;
 `;
 
 const ImageRow = styled.div`

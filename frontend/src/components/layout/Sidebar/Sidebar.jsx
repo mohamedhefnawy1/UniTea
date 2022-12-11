@@ -18,6 +18,10 @@ const Sidebar = () => {
             </div>
             <div className="suggested_friends">
                 <Suggested_Friend />
+                <Suggested_Friend />
+                <Suggested_Friend />
+                <Suggested_Friend />
+
             </div>
         </div>
     );
