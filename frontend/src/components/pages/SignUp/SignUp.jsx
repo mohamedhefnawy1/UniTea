@@ -21,15 +21,11 @@ const SignUp = () => {
         }
         else {
             console.log(username, email, password, confirmPassword);
-            // fetch("/signUp", {
-            //   method: "POST",
-            //   body: JSON.stringify({ username, password }),
-            //   headers: { "Content-Type": "application/json" }
-            // })
-            //   .then(response => response.json())
-            //   .then(data => {
-            //     console.log(data);
-            //   });
+            fetch("/register", {
+                method: "POST",
+                body: JSON.stringify({ username, password, email}),
+                headers: { "Content-Type": "application/json" }
+            })
         }
     }
 
