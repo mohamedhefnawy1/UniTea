@@ -4,6 +4,7 @@ import './Post_feed.css'
 import like_button from '../../../assets/heart.png'
 import send_button from '../../../assets/send.png'
 import Post1 from '../../../assets/post1.jpg'
+import Post2 from '../../../assets/wallpaper.jpg'
 
 import Friend from '../friend/Friend';
 import Comment from '../comment/Comment'
@@ -19,11 +20,11 @@ const Post_feed = () => {
                 </div>
             </div>
             <div className='post_body'>
-                <img id='posted_img' src={Post1} alt="" />
+                <img id='posted_img' src={Post2} alt="" />
             </div>
-            {/* <div className='comment_box'>
+            <div className='comment_box'>
                 <Comment id='userComment' />
-            </div> */}
+            </div>
             <div className='post_footer'>
                 {/* <input className="add_comment_box">Add comment</input> */}
                 

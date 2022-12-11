@@ -5,6 +5,9 @@
   flex-direction: column;
   display: flex;
   border: none;
+  position: relative;
+  right: 250px;
+  border-radius: 20px;
 }
 
 .buttonDawg{
@@ -13,6 +16,11 @@
  height: auto;
  width: auto;
  border:none;
+}
+
+.imgP{
+  width: 20px;
+  height: 24px;
 }
 
 .placeholderINPUT{
@@ -26,6 +34,7 @@
   width: 20rem;
   border: none;
   background: transparent;
+  outline: none;
 }
 
 .ImageStack{
@@ -34,10 +43,37 @@
   position: relative;
 }
 
+
 /* --------------------------------------------------------------------- */
-@media screen and (max-width: 550px) {
+
+@media screen and (max-width: 1350px) {
+  .buttonMan{
+    position: relative;
+    right: 150px;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+
+@media screen and (max-width: 950px) {
+  .buttonMan{
+    position: relative;
+    right: 50px;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+
+@media screen and (max-width: 750px) {
+  .buttonMan{
+    position: relative;
+    right: 0px;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+@media screen and (max-width: 650px) {
     .buttonMan{
-      width: 200px;
-      height: 20px;
+      display: none;
     }
 }

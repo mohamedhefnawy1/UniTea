@@ -24,6 +24,8 @@
     height: auto;
     background: none;
     border: none;
+    outline: none;
+
 }
 
 .nav_buttons{
@@ -38,6 +40,8 @@
     height: auto;
     background: none;
     border: none;
+    outline: none;
+
 }
 
 #down_btn{
@@ -47,6 +51,7 @@
     border: none;
     position: relative;
     right: 3px;
+    outline: none;
 }
 
 .nav_img{

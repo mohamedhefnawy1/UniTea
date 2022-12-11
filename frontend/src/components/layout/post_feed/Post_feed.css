@@ -1,10 +1,13 @@
 .main_holder{
     height: auto;
     width: inherit;
+    min-width: 700px;
     max-width: 30rem;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     margin-top: 100px;
-    padding-left: 20px;
+    padding: 0px 20px;
+    position: relative;
+    left: 150px;
 }
 
 .post_head{
@@ -25,7 +28,7 @@
 .like_button_holder{
     display: flex;
     justify-content: right;
-    align-items: center;
+    align-items: center;    
     padding-right: 20px;
 }
 
@@ -104,10 +107,72 @@
 
 
 /* --------------------------------------------------------------------- */
+@media screen and (max-width: 765px) {
+    .main_holder{
+        height: auto;
+        width: inherit;
+        min-width: 400px;
+        max-width: 30rem;
+        /* background-color: rgb(255, 255, 255); */
+        margin-top: 100px;
+        padding: 0px 20px;
+        position: relative;
+        left: 100px;
+    }
+}
+
+
+/* --------------------------------------------------------------------- */
 @media screen and (max-width: 550px) {
     #comment_box{
         left: 10px;
         max-width: 150px;
         font-size: small;
+    }
+
+    .main_holder{
+        height: auto;
+        width: inherit;
+        min-width: 400px;
+        max-width: 30rem;
+        /* background-color: rgb(255, 255, 255); */
+        margin-top: 100px;
+        padding: 0px 20px;
+        position: relative;
+        left: 100px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #comment_box{
+        left: 10px;
+        max-width: 100px;
+        font-size: x-small;
+    }
+    
+    .main_holder{
+        height: auto;
+        width: inherit;
+        min-width: 300px;
+        max-width: 30rem;
+        /* background-color: rgb(255, 255, 255); */
+        margin-top: 100px;
+        padding: 0px 20px;
+        position: relative;
+        left: 90px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .main_holder{
+        height: auto;
+        width: inherit;
+        min-width: 300px;
+        max-width: 30rem;
+        /* background-color: rgb(255, 255, 255); */
+        margin-top: 100px;
+        padding: 0px 20px;
+        position: relative;
+        left: 80px;
     }
 }

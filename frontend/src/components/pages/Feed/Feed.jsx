@@ -8,7 +8,8 @@ const Feed = () => {
 
     return(
         <div className='row no-gutters'>
-            <div className="col-8">
+            <div className="col-8 sm-auto">
+                {/* <div className="top vh-50"></div> */}
                 <div className="post_holder d-flex justify-content-center">
                     <Post_feed />  
                 </div>
@@ -17,7 +18,7 @@ const Feed = () => {
                 </div>
             </div>
             
-            <div className="col-4">
+            <div className="col-4 d-sm-none d-md-block">
                 <div className="sidebar_holder d-flex justify-content-end">
                     <Sidebar />
                 </div>

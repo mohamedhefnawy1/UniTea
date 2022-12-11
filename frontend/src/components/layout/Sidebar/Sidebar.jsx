@@ -11,12 +11,14 @@ const Sidebar = () => {
     return(
         <div className="Sidebar">
             <div className="user_friends">
+                <div className="user_friends_title">Friends</div>
                 <Friend />
                 <Friend />
                 <Friend />
                 <Friend />
             </div>
             <div className="suggested_friends">
+                <div className="suggested_friends_title">Suggested Friends</div>
                 <Suggested_Friend />
                 <Suggested_Friend />
                 <Suggested_Friend />

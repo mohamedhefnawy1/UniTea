@@ -15,12 +15,12 @@ function Comment(props) {
 
 const Rect = styled.div`
   display: flex;
-  width: 340px;
+  width: auto;
   height: 46px;
   background-color: #E6E6E6;
   flex-direction: row;
-  margin-top: 264px;
-  margin-left: 637px;
+  margin-top: 0px;
+  margin-left: 0px;
 `;
 
 const User01 = styled.span`
