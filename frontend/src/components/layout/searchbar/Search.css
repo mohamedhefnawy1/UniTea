@@ -5,7 +5,6 @@
   flex-direction: column;
   display: flex;
   border: none;
-;
 }
 
 .ButtonOverlay{
@@ -23,7 +22,6 @@
   height: 28px;
   width: 27px;
   object-fit: contain;
-;
 }
 
 .placeholderINPUT{
