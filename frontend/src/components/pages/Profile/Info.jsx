@@ -5,6 +5,8 @@ import Avatar from './Avatar';
 import EditProfile from './EditProfile';
 import { getProfileUsers } from '../../../redux/actions/profileAction';
 import Follow from './Follow';
+import Following from './Following';
+import Followers from './Followers';
 
 
 const Info = () => {
@@ -13,6 +15,10 @@ const Info = () => {
     const dispatch = useDispatch()
     const [userData, setUserData] = useState([]) 
     const [onEdit, setOnEdit] = useState(false)
+
+    const [showFollowers, setShowFollowers] = useState(false)
+    const [showFollowing, setShowFollowing] = useState(false)
+
 
     useEffect(() => {
         if(auth.hasOwnProperty('token')) {
@@ -58,10 +64,10 @@ const Info = () => {
                                 </div>
 
                                 <div className="info_follow">
-                                    <span>
+                                    <span className='mr-3' onClick={() => setShowFollowers(true)}>
                                         {user.followers.length} Followers     
                                     </span>
-                                    <span>
+                                    <span className='mr-5' onClick={() => setShowFollowing(true)}>
                                         {user.following.length} Following
                                     </span>
                                 </div>
@@ -75,6 +81,16 @@ const Info = () => {
                                 setOnEdit={setOnEdit} 
                                 />
                             } */}
+
+
+                            {
+                                showFollowers && 
+                                <Followers users={user.followers} setShowFollowers={setShowFollowers}/>
+                            }
+                            {
+                                showFollowing && 
+                                <Following users={user.following} setShowFollowing={setShowFollowing} />
+                            }
                         
                         
                         

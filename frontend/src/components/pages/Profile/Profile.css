@@ -47,7 +47,48 @@
     cursor: pointer;
     padding-bottom: 20px;
 }
-.info_container .info_follow span{
-    flex: ;
-    padding-right: 10px;
+
+
+.info_container p {
+    padding-right: 100px;
+}
+
+
+
+/* Follow */
+
+.follow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.609);
+    width: 100%;
+    height: 100vh;
+    z-index: 4;
+}
+
+.follow_box {
+    border-radius: 25px;
+    width: 400px;
+    height: 700px;
+    border: 1px solid #222;
+    background-color: #F1F0F0;
+    padding: 20px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+}
+
+.follow_box .close {
+    position: absolute;
+    bottom: 0;
+    right: 40%;
+    padding-bottom: 10px;
+}
+
+.follow_list {
+    margin-left: 15%;
+    
 }
