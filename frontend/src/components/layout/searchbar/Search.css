@@ -1,0 +1,48 @@
+.buttonMan{
+  width: 282px;
+  height: 39px;
+  background-color: #E6E6E6;
+  flex-direction: column;
+  display: flex;
+  border: none;
+;
+}
+
+.ButtonOverlay{
+ display: block;
+ background: none;
+ height: 100%;
+ width: 100%;
+ border:none;
+}
+
+.imgP{
+  position: absolute;
+  top: 6px;
+  left: 241px;
+  height: 28px;
+  width: 27px;
+  object-fit: contain;
+;
+}
+
+.placeholderINPUT{
+  font-family: Roboto;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  font-style: normal;
+  font-weight: 400;
+  color: #121212;
+  height: 39px;
+  width: 282px;
+  border: none;
+  background: transparent;
+}
+
+.ImageStack{
+  width: 282px;
+  height: 39px;
+  position: relative;
+}
+
