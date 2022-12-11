@@ -1,6 +1,7 @@
 import React from 'react'
 import Post_feed from '../../layout/post_feed/Post_feed';
 import Sidebar from '../../layout/Sidebar/Sidebar';
+import Navbar from '../../layout/navbar/Navbar';
 
 
 
@@ -8,6 +9,7 @@ const Feed = () => {
 
     return(
         <div className='row no-gutters'>
+            <Navbar />
             <div className="col-8 sm-auto">
                 {/* <div className="top vh-50"></div> */}
                 <div className="post_holder d-flex justify-content-center">

@@ -31,11 +31,10 @@ function App() {
         <Notify/>
         <div className='content'>
           <Routes>
-            <Route exact path='/' element={auth.token ? <Landing/> : <LogIn/>} />
-            <Route exact path='/landing' element={<Landing />} />
-            <Route exact path='/signUp' element={<SignUp />} />
-            <Route exact path='/feed' element={<Feed />} />
-            <Route exact path='/profile:id' element={<Profile />} />
+            <Route exact path='/' element={auth.token ? <Feed/> : <LogIn/>} />
+            <Route exact path='/signUp' element={auth.token ? <Feed/> : <SignUp />} />
+            <Route exact path='/logIn' element={auth.token ? <Feed/> : <LogIn />} />
+            <Route exact path='/profile:id' element={auth.token ? <Profile /> : <Landing />} />
 
           </Routes>
         </div>

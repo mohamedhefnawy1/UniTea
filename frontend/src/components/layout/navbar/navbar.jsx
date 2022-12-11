@@ -1,5 +1,7 @@
-import React from 'react'
-import './navbar.css'
+import {React, useEffect, useState }from 'react'
+import './Navbar.css'
+import { useSelector, useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom';
 
 import Logo from '../../../assets/UniTea-1.png'
 import Post_img from '../../../assets/post_img.png'
@@ -7,9 +9,19 @@ import Profile_pic from '../../../assets/profile_pic.png'
 import Down_btn from '../../../assets/down.png'
 
 import Searchbar from '../searchbar/Search';
+import Avatar from '../../pages/Profile/Avatar'
 
 const Navbar = () => {
 
+    const { auth, profile } = useSelector(state => state)
+    const [User, setUser] = useState([])
+
+    useEffect(()=>{
+        if(auth.hasOwnProperty('token')) {
+            setUser(auth.user)
+            console.log(User)
+        }
+    })
     return(
         <div className="main-container">
             <div className="nav">
@@ -21,9 +33,11 @@ const Navbar = () => {
                     <button id="createPost">
                         <img className="nav_img" src={Post_img} alt="" />
                     </button>
-                    <a href="/profile" id="nav_profile_btn">
-                        <img className="nav_img" src={Profile_pic} alt="" />
-                    </a>
+                    <Link to={`/profile:${User._id}`}>
+                        <div>
+                            <Avatar src={User.profilePic} size="medium-avatar"/>
+                        </div>
+                    </Link>
                     <button id="down_btn">
                         <img className="nav_img" id="down_btn" src={Down_btn} alt="" />
                     </button>
