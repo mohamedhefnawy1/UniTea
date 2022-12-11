@@ -1,11 +1,14 @@
 import React, { Component } from "react";
+
+import './Search.css';
+
 import styled, { css } from "styled-components";
 
-function Index(props) {
+function Search(props) {
   return (
     <div className='buttonMan'>
       <button className='buttonDawg'>
-        <div>
+        <div className='ImageStack'>
           <img className='imgP' src={require("../../../assets/search.png")}></img>
           <input className="placeholderINPUT" placeholder=""></input>
         </div>
@@ -15,4 +18,4 @@ function Index(props) {
 }
 
 
-export default Index;
+export default Search;

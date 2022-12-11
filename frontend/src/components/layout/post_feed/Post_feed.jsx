@@ -13,7 +13,9 @@ const Post_feed = () => {
         <div class="main_holder">
             <div className='post_head'>
                 <div className="post_username"><Friend id='userBox' /></div>
-                <button id='like_button'><img id='like_img' src={like_button} alt="" /></button>
+                <div className="like_button_holder">
+                    <button id='like_button'><img id='like_img' src={like_button} alt="" /></button>
+                </div>
             </div>
             <div className='post_body'>
                 <img id='posted_img' src={Post1} alt="" />
