@@ -19,6 +19,7 @@ display: grid;
 grid-template-columns: auto auto;
 align-items: center;
 padding: 15px 0px;
+padding-left: 15px;
 
 `;
 
@@ -41,7 +42,7 @@ const Follow = styled.span`
   font-size: 14px;
   display: flex;
   align-items: center;
-  padding-left: 15px;
+  padding-left: 25px;
   justify-content: center;
 `;
 

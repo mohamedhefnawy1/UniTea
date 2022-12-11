@@ -26,6 +26,7 @@
     display: flex;
     justify-content: right;
     align-items: center;
+    padding-right: 20px;
 }
 
 #like_button{
@@ -55,6 +56,11 @@
     padding: 10px 0px
 }
 
+.comment_holder{
+    display:flex;
+    align-items: left;
+}
+
 #comment_box{
     max-width: 200px;
     border-radius: 10px;
@@ -63,9 +69,23 @@
     font-size: small;
 }
 
+#send_button{
+    background: none;
+    border: none;
+    outline: none;
+    width: fit-content;
+    height: fit-content;
+}
+
+#send_img{
+    width: 15px;
+    height: 15px;
+}
+
 .footerInfoHolder{
     display: flex;
     align-items: center;
+    justify-content: right;
 }
 
 .numberOfLikes{

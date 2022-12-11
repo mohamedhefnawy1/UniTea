@@ -1,5 +1,5 @@
 .Sidebar{
-    background-color: #00747025;
+    background-color: #c4c4c4;
     height: 100vh;
     /* z-index: 1; Stay on top */
     position: fixed;
@@ -17,7 +17,7 @@
 /* --------------------------------------------------------------------- */
 @media screen and (max-width: 770px) {
     .Sidebar{
-        background-color: #00747025;
+        background-color: #c4c4c4;
         height: 100vh;
         /* z-index: 1; Stay on top */
         position: fixed;

@@ -1,7 +1,8 @@
 import React from 'react'
 import './Post_feed.css'
 
-import like_button from '../../../assets/like.png'
+import like_button from '../../../assets/heart.png'
+import send_button from '../../../assets/send.png'
 import Post1 from '../../../assets/post1.jpg'
 
 import Friend from '../friend/Friend';
@@ -26,7 +27,10 @@ const Post_feed = () => {
             <div className='post_footer'>
                 {/* <input className="add_comment_box">Add comment</input> */}
                 
-                <input type="text" id="comment_box" name="name" requiredminlength="15" placeholder='Add Comment!' size="25"></input>
+                <div className="comment_holder">
+                    <input type="text" id="comment_box" name="name" requiredminlength="15" placeholder='Add Comment!' size="25"></input>
+                    <button id='send_button'><img id='send_img' src={send_button} alt="" /></button>
+                </div>
                 <div className="footerInfoHolder">
                     <div className="numberOfLikes">Likes</div>
                     <div className="numberOfComments">Comments</div>
