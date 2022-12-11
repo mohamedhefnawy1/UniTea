@@ -1,9 +1,9 @@
 import React from 'react'
 import './Avatar.css'
 
-const Avatar = ({src}) => {
+const Avatar = ({src, size}) => {
   return (
-    <img src={src} alt="profilePic" className="avatar" />
+    <img src={src} alt="profilePic" className={size} />
   )
 }
 
