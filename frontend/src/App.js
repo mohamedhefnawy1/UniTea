@@ -1,4 +1,4 @@
-import  Navbar  from './components/layout/Navbar/Navbar';
+import  Navbar  from './components/layout/navbar/navbar';
 import  Landing  from './components/pages/Landing/Landing';
 import  LogIn  from './components/pages/LogIn/LogIn';
 import  SignUp  from './components/pages/SignUp/SignUp';

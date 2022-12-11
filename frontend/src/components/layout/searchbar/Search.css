@@ -1,6 +1,6 @@
 .buttonMan{
-  width: 282px;
-  height: 39px;
+  width: auto;
+  height: auto;
   background-color: #ffffff;
   flex-direction: column;
   display: flex;
@@ -15,25 +15,15 @@
  border:none;
 }
 
-.imgP{
-  position: absolute;
-  top: auto;
-  left: auto;
-  height: 28px;
-  width: 27px;
-  object-fit: contain;
-}
-
 .placeholderINPUT{
   font-family: Roboto;
   top: 0px;
-  right: 5px;
-  position: absolute;
+  position: center;
   font-style: normal;
   font-weight: 400;
   color: #121212;
-  height: auto;
-  width: auto;
+  height: 2rem;
+  width: 20rem;
   border: none;
   background: transparent;
 }

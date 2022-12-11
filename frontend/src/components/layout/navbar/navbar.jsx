@@ -1,5 +1,5 @@
 import React from 'react'
-import './Navbar.css'
+import './navbar.css'
 
 import Logo from '../../../assets/UniTea-1.png'
 import Post_img from '../../../assets/post_img.png'
