@@ -21,9 +21,9 @@ const Navbar = () => {
                     <button id="createPost">
                         <img className="nav_img" src={Post_img} alt="" />
                     </button>
-                    <button id="nav_profile_btn">
+                    <a href="/profile" id="nav_profile_btn">
                         <img className="nav_img" src={Profile_pic} alt="" />
-                    </button>
+                    </a>
                     <button id="down_btn">
                         <img className="nav_img" id="down_btn" src={Down_btn} alt="" />
                     </button>
