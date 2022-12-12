@@ -6,6 +6,7 @@ import send_button from '../../../assets/send.png'
 import Post1 from '../../../assets/post1.jpg'
 import Post2 from '../../../assets/wallpaper.jpg'
 
+import UserCard from '../../pages/Profile/UserCard'
 import Friend from '../friend/Friend';
 import Comment from '../comment/Comment'
 

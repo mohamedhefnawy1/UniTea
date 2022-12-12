@@ -58,3 +58,28 @@
     width: 30px;
     height:30px;
 }
+
+/* ---------------------------------------------------- */
+@media screen and (max-width: 950px) {
+    .logo_holder{
+        padding-left: 0px;
+    }
+    
+    .nav_buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 15px;
+    }
+
+    #createPost{
+        width: auto;
+        height: auto;
+        background: none;
+        border: none;
+        outline: none;
+        position: relative;
+        right: 10px;
+    }
+  }
+  
