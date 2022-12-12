@@ -19,7 +19,6 @@ const Navbar = () => {
     useEffect(()=>{
         if(auth.hasOwnProperty('token')) {
             setUser(auth.user)
-            console.log(User)
         }
     })
     return(
