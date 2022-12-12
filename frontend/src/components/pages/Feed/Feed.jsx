@@ -3,9 +3,12 @@ import Post_feed from '../../layout/post_feed/Post_feed';
 import Sidebar from '../../layout/Sidebar/Sidebar';
 import Navbar from '../../layout/navbar/Navbar';
 
-
+import getDataAPI from '../../../utils/fetchData'
+import { refreshToken } from '../../../redux/actions/authAction';
 
 const Feed = () => {
+
+    getDataAPI('http://localhost:4000/api/posts', refreshToken)
 
     return(
         <div className='row no-gutters'>

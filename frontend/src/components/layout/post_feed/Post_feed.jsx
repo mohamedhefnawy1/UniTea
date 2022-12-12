@@ -10,7 +10,11 @@ import UserCard from '../../pages/Profile/UserCard'
 import Friend from '../friend/Friend';
 import Comment from '../comment/Comment'
 
+
+import { useState, useEffect } from "react";
+
 const Post_feed = () => {
+
 
     return(
         <div class="main_holder">
