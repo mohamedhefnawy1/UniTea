@@ -30,11 +30,7 @@ const Info = () => {
                     setUserData([newData[0]])
                 }
             }
-            
-            
         }
-
-
     }, [id, auth, dispatch, profile.users])
 
     return (

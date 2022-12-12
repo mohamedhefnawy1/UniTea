@@ -12,7 +12,7 @@ import Comment from '../comment/Comment'
 const Post_feed = () => {
 
     return(
-        <div class="main_holder">
+        <div className="main_holder">
             <div className='post_head'>
                 <div className="post_username"><Friend id='userBox' /></div>
                 <div className="like_button_holder">
