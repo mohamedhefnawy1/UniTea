@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SearchList from "./SearchList";
 
 import "./Search.css";
 
@@ -25,40 +26,35 @@ function Search(props) {
 
   return (
     <div className="search">
-      <div className="searchBar">
-        <div className="buttonMan">
-          <button className="buttonDawg">
-            <div className="ImageStack">
-              <img
-                className="imgP"
-                src={require("../../../assets/search.png")}
-              ></img>
-              <input
-                value={search}
-                id="search"
-                type="text"
-                className="placeholderINPUT"
-                placeholder=""
-                onChange={(e) =>
-                  setSearch(e.target.value.toLowerCase().replace(/ /g, ""))
-                }
-              />
-            </div>
-          </button>
-        </div>
-      </div>
 
-      <div className="users">
-        {users.map((user) => {
-          <div className="testing123123">
-            {user._id}
-            <Link key={user._id} to={`/profile:${user.id}`}>
-              <SearchUser user={user} />
+          <div className="searchBar">
+                  <div className="buttonMan">
+                    <button className="buttonDawg">
+                      <div className="ImageStack">
+                        <img
+                          className="imgP"
+                          src={require("../../../assets/search.png")}
+                        ></img>
+                        <input
+                          value={search}
+                          id="search"
+                          type="text"
+                          className="placeholderINPUT"
+                          placeholder=""
+                          onChange={(e) =>
+                            setSearch(e.target.value.toLowerCase().replace(/ /g, ""))
+                          }
+                        />
+                      </div>
+                    </button>
+                  </div>
+          </div>
 
-            </Link>
-          </div>;
-        })}
-      </div>
+          <div className="users">
+                {search && users && <SearchList users={users}/>}
+          </div>
+ 
+
     </div>
   );
 }

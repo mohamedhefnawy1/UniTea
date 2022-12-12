@@ -6,7 +6,7 @@ const SearchUser = ({user}) => {
         <div className="d-flex p-2 align-item-center">
             <Avatar src={user.profilePic} size="big-avatar"/>
             <div className="m1-1">
-                <span className="d-block">{user.username}</span>
+                <p>{user.username}</p>
             </div>
         </div>
     )

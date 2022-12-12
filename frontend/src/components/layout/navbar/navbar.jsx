@@ -27,7 +27,14 @@ const Navbar = () => {
                 <a className='logo_holder' href="/">
                     <img id="logo" src={Logo} alt="" />
                 </a>
-                <Searchbar></Searchbar>
+
+
+                <div className="searchBarDiv">
+                    <Searchbar></Searchbar>
+                </div>
+
+
+
                 <div className="nav_buttons">
                     <button id="createPost">
                         <img className="nav_img" src={Post_img} alt="" />
