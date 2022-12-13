@@ -1,5 +1,6 @@
 import { GLOBALTYPES, DeleteData } from "./globalTypes";
 import { getDataAPI, patchDataAPI } from '../../utils/fetchData'
+import { imageUpload } from "../../utils/imageUpload";
 
 export const PROFILE_TYPES = {
     LOADING: 'LOADING',
@@ -91,5 +92,47 @@ export const unfollow = ({users, user, auth}) => async (dispatch) => {
         })
     }
 
+
+}
+
+export const updateProfile = ({userData, profilePic, auth}) => async (dispatch) => {
+    console.log(userData)
+
+    if(!userData.story) {
+        return dispatch({type: GLOBALTYPES.ALERT, payload: {error: "Add a bio please"}});
+    }
+    if(!userData.username) {
+        return dispatch({type: GLOBALTYPES.ALERT, payload: {error: "Add a username please"}});
+    }
+
+    try {
+        let media;
+
+        if(profilePic) {
+            media = await imageUpload([profilePic])
+        }
+
+        const response = await patchDataAPI(`user`, {
+            ...userData,
+            profilePic: profilePic ? media[0].url : auth.user.profilePic
+        }, auth.token)
+        console.log(response)
+
+        dispatch({
+            type: GLOBALTYPES.AUTH,
+            payload: {
+                ...auth,
+                user: {
+                    ...auth.user, ...userData,
+                    profilePic: profilePic ? media[0].url : auth.user.profilePic,
+                }
+            }
+        })
+
+        
+    } catch (err) {
+        console.log(err)
+        
+    }
 
 }

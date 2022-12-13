@@ -69,13 +69,17 @@ const Info = () => {
                                 <p>{user.story}</p>
                             </div>
 
-                            {/* {
-                                onEdit && 
-                                <EditProfile 
-                                user={user} 
-                                setOnEdit={setOnEdit} 
-                                />
-                            } */}
+                            <div className="edit-form">
+                                {
+                                    onEdit && 
+                                    <EditProfile 
+                                    user={user} 
+                                    setOnEdit={setOnEdit} 
+                                    />
+                                }
+
+                            </div>
+
 
 
                             {
