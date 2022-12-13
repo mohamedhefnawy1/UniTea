@@ -23,6 +23,12 @@ const Navbar = () => {
             setUser(auth.user)
         }
     })
+    
+    function logOut() {      
+        localStorage.removeItem('firstLogin');
+        document.location.href = '/'
+      }
+
     return(
         <div className="main-container">
             <div className="nav">
@@ -38,6 +44,7 @@ const Navbar = () => {
 
 
                 <div className="nav_buttons">
+                    <button id="logOut" onClick={() => logOut()}></button>
                   <Link to={`/createPost`}>
                     <button id="createPost">
                         <img className="nav_img" src={Post_img} alt="" />
