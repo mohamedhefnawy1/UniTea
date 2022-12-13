@@ -14,7 +14,6 @@ import { refreshToken } from './redux/actions/authAction';
 
 import PrivateRoutes from './components/routing/PrivateRoutes';
 
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -31,11 +30,10 @@ function App() {
         <Notify/>
         <div className='content'>
           <Routes>
-            <Route exact path='/' element={auth.token ? <Feed/> : <LogIn/>} />
+            <Route exact path='/' element={auth.token ? <Feed/> : <Landing/>} />
             <Route exact path='/signUp' element={auth.token ? <Feed/> : <SignUp />} />
             <Route exact path='/logIn' element={auth.token ? <Feed/> : <LogIn />} />
             <Route exact path='/profile:id' element={auth.token ? <Profile /> : <Landing />} />
-
           </Routes>
         </div>
       </Router>

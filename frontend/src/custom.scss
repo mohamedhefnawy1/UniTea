@@ -9,7 +9,7 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
-// Landing Pge CSS
+// Landing Page CSS
 
 .landing-text {
   position: absolute;
@@ -81,7 +81,7 @@ html {
 
 .container-title-signup {
   position: absolute;
-  top: 17.5%;  /* position the top  edge of the element at the middle of the parent */
+  top: 12%;  /* position the top  edge of the element at the middle of the parent */
   left: 50%; /* position the left edge of the element at the middle of the parent */
   transform: translate(-50%, -50%);
 
@@ -112,6 +112,45 @@ html {
   background-color: whitesmoke;
 }
 
+// CSS for phone screens
+@media only screen and (max-width: 600px) {
+  .landing-text {
+    font-size: 30px;
+  }
+
+  .landing-boxes div{
+    width: 20em;
+    height: 30em;
+  }
+
+  .landing-box1 {
+    top: 20%;
+    left: 4em;
+  }
+
+  .landing-box2 {
+    top: 25%;
+    left: 30%;
+  }
+
+  .landing-box3 {
+    top: 15%;
+    left: 50%;
+  }
+
+  .form-container {
+    width: 90%;
+    padding: 1em;
+  }
+
+  .container-title-login {
+    top: 28%;
+  }
+
+  .container-title-signup {
+    display: none;
+  }
+}
 
 // Import Bootstrap and its default variables
-@import '~bootstrap/scss/bootstrap.scss';// change the theme
+@import '~bootstrap/scss/bootstrap.scss';

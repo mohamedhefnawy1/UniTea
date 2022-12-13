@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux'
 const SignUp = () => {
 
     const [username, setUsername] = React.useState('');
+    const [fullName, setFullName] = React.useState('');
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [confirmPassword, setConfirmPassword] = React.useState('');
@@ -22,14 +23,34 @@ const SignUp = () => {
             alert("Passwords do not match");
             return;
         }
+        else if(email.includes('@ucalgary.ca') === false) {
+            alert("Please use a UCalgary email");
+            return;
+        }
         else {
 
-            // TODO: dispatch to redux
-            dispatch(signUp({
-                username: username,
-                email: email,
-                password: password,
-            }));
+            fetch('http://localhost:5000/api/users/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        fullName: fullName,
+                        username: username,
+                        email: email,
+                        password: password,
+                        gender: 'Not set',
+                    })
+            })
+            .then(response => response)
+            .then(data => {
+                console.log('Success:', data);        
+                window.location.href = '/profile' + data.id;
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+
             console.log(username, email, password, confirmPassword);
         }
     }
@@ -54,6 +75,15 @@ const SignUp = () => {
             <div className='container-title-signup'> Sign Up </div>
             <div className='form-container'>
                 <Form className='form' onSubmit={handleSubmit}>
+                    <Form.Group controlId="formBasicFullName">
+                        <Form.Label>Full name</Form.Label>
+                        <Form.Control type="text" placeholder="Enter your full name" value={fullName} onChange={
+                            (e)=> {
+                                setFullName(e.target.value);
+                            }
+                        }/>
+                    </Form.Group>
+
                     <Form.Group controlId="formBasicUsername">
                         <Form.Label>Username</Form.Label>
                         <Form.Control type="text" placeholder="Enter username" value={username} onChange={
@@ -93,6 +123,9 @@ const SignUp = () => {
                     <Button variant="secondary" type="submit">
                         Submit
                     </Button>
+                    <div>Already have an account?  
+                        <a href="/logIn" style={{'marginLeft': '1em'}}>Login here</a>
+                    </div>
                 </Form>
             </div>
         </>

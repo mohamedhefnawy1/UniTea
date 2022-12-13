@@ -22,16 +22,16 @@ const Landing = () => {
                 </Nav>
                 </Container>
             </Navbar>
-            <body>
-            <div className='landing-boxes'>
-                <div className='landing-box1'></div>
-                <div className='landing-box2'></div>
-                <div className='landing-box3'></div>
+            <div>
+                <div className='landing-boxes'>
+                    <div className='landing-box1'></div>
+                    <div className='landing-box2'></div>
+                    <div className='landing-box3'></div>
+                </div>
+                <div className='landing-text'>
+                    Stand out and reach other students with UniTEA's student-focused social media app
+                </div>
             </div>
-            <div className='landing-text'>
-                Stand out and reach other students with UniTEA's student-focused social media app
-            </div>
-            </body>
         </div>
     )
 }

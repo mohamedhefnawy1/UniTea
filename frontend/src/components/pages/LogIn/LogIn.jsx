@@ -62,6 +62,9 @@ const LogIn = () => {
                     <Button variant="secondary" type="submit">
                         Submit
                     </Button>
+                    <div> Don't have an account? 
+                        <a href="/signUp" style={{'marginLeft' : '1em'}}>Sign up here</a>
+                    </div>
                 </Form>
             </div>
         </>
