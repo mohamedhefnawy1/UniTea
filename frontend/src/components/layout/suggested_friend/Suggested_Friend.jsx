@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
 
-import './Suggested_friend.css'
+import './Suggested_Friend.css'
 
 function Untitled(props) {
   return (
