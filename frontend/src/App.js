@@ -6,6 +6,7 @@ import  SignUp  from './components/pages/SignUp/SignUp';
 import  Feed  from './components/pages/Feed/Feed';
 import Profile from './components/pages/Profile/[id]';
 import Notify from './components/notify/Notify'
+import Create_post from './components/layout/create_post/Create_post';
 
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -35,7 +36,7 @@ function App() {
             <Route exact path='/signUp' element={auth.token ? <Feed/> : <SignUp />} />
             <Route exact path='/logIn' element={auth.token ? <Feed/> : <LogIn />} />
             <Route exact path='/profile:id' element={auth.token ? <Profile /> : <Landing />} />
-
+            <Route exact path='/createpost' element={auth.token ? <Create_post /> : <Landing />} />
           </Routes>
         </div>
       </Router>
