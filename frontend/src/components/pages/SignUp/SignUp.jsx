@@ -29,26 +29,28 @@ const SignUp = () => {
         }
         else {
 
-            fetch('http://localhost:5000/api/users/register', {
+            fetch('http://localhost:4000/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        fullName: fullName,
+                        fullname: fullName,
                         username: username,
                         email: email,
                         password: password,
                         gender: 'Not set',
+                        profilePic: "https://cdn.discordapp.com/attachments/1032006385732427801/1048099176434647100/user.png"
                     })
             })
             .then(response => response)
             .then(data => {
                 console.log('Success:', data);        
-                window.location.href = '/profile' + data.id;
+                window.location.href = '/';
+                alert("PLEASE CHECK YOUR EMAIL AND CONFIRM YOUR ACCOUNT TO REGISTER")
             })
             .catch((error) => {
-                console.error('Error:', error);
+                alert('Error:', error);
             });
 
             console.log(username, email, password, confirmPassword);
