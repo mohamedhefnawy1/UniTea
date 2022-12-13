@@ -56,7 +56,6 @@
 }
 
 .post_body{
-    width: fit-content;
     height:fit-content;
 }
 
@@ -88,7 +87,7 @@
 
 }
 
-#comment_box{
+.comment_holder #content{
     max-width: 200px;
     border-radius: 10px;
     border-style:solid;

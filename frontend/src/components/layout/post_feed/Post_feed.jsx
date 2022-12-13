@@ -12,7 +12,7 @@ import Comment from '../comment/Comment'
 import Posted_user from '../posted_user/Posted_user'
 
 import { useSelector } from 'react-redux';
-import { getDataAPI } from '../../../utils/fetchData'
+import { getDataAPI, postDataAPI } from '../../../utils/fetchData'
 import { useEffect,useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -21,6 +21,24 @@ const Post_feed = ({id}) => {
 
     const [postInfo, setPostInfo] = useState([]);
     const {auth} = useSelector(state => state)
+
+    const [comment, setComment] = useState({
+        postId: id,
+        content: "",
+        tag: ""
+    })
+
+    
+    function create_Comment() {
+        const response = postDataAPI(`comment`, comment , auth.token);
+    }
+    
+    function handle(e) {
+        const newData = { ...comment }
+        newData[e.target.id] = e.target.value
+        setComment(newData)
+        console.log(newData)
+    }
 
     async function fetchData() {
         console.log(id)
@@ -62,7 +80,8 @@ const Post_feed = ({id}) => {
                 {/* <input className="add_comment_box">Add comment</input> */}
                 
                 <div className="comment_holder">
-                    <input type="text" id="comment_box" name="name" requiredminlength="15" placeholder='Add Comment!' size="25"></input>
+                    <input onChange={(e) => handle(e)}  type="text" id="content" name="name" requiredminlength="15" placeholder='Add Comment!' size="25"></input>
+                    {/* onClick={() => create_Comment()} */}
                     <button id='send_button'><img id='send_img' src={send_button} alt="" /></button>
                 </div>
                 <div className="footerInfoHolder">

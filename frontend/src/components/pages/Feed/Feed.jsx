@@ -14,10 +14,11 @@ const Feed = () => {
     const [suggestedUsers, setSuggestedUsers] = useState([]);
     const {auth} = useSelector(state => state)
 
+
     async function fetchData() {
         const postResponse = await getDataAPI('posts', auth.token);
         const suggestedFriendsResponse = await getDataAPI('suggestionsUser', auth.token);
-        setPosts(postResponse.data.posts)
+        setPosts(postResponse.data.posts.reverse())
         setSuggestedUsers(suggestedFriendsResponse.data.users)
         console.log(postResponse.data.posts)
     }
