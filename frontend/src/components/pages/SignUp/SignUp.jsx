@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
+import { useDispatch } from 'react-redux'
 
 const SignUp = () => {
 
@@ -11,6 +12,8 @@ const SignUp = () => {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [confirmPassword, setConfirmPassword] = React.useState('');
+
+    const dispatch = useDispatch();
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -20,6 +23,11 @@ const SignUp = () => {
             return;
         }
         else {
+            dispatch(signUp({
+                username: username,
+                email: email,
+                password: password,
+            }));
             console.log(username, email, password, confirmPassword);
         }
     }
