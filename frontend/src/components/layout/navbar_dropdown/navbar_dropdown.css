@@ -1,0 +1,41 @@
+.Navbar_dropdown {
+  position: fixed;
+  top: 4.5em;
+  right: 2em;
+  background-color: #ebebeb;
+  border-radius: 10px;
+  z-index: 100000;
+}
+
+.dropdown_box {
+  display: flex;
+  flex-direction: column;
+  height: 5em;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 0.5em;
+}
+
+.dropdown_box button {
+  background-color: whitesmoke;
+  background: linear-gradient(to bottom, #ebebeb, #cecece);
+  color: #007471;
+  border: 2px solid #007471;
+  cursor: pointer;
+  font-size: 0.8em;
+  font-weight: 500;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.edit_profile_btn:hover {
+  background: #007471;
+  color: whitesmoke;
+  border: 2px solid rgb(184, 184, 184);
+}
+
+.logout_btn:hover {
+  background: #007471;
+  color: rgb(254, 118, 118);
+  border: 2px solid rgb(184, 184, 184);
+}
