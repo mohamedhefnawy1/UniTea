@@ -58,7 +58,7 @@ html {
   position: absolute;
   top: 50%;  /* position the top  edge of the element at the middle of the parent */
   left: 50%; /* position the left edge of the element at the middle of the parent */
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -35%);
   width: auto;
   padding: 2em;
   border-radius: 10px;
@@ -68,7 +68,7 @@ html {
 
 .container-title-login {
   position: absolute;
-  top: 28%;  /* position the top  edge of the element at the middle of the parent */
+  top: 30%;  /* position the top  edge of the element at the middle of the parent */
   left: 50%; /* position the left edge of the element at the middle of the parent */
   transform: translate(-50%, -50%);
 
@@ -81,7 +81,7 @@ html {
 
 .container-title-signup {
   position: absolute;
-  top: 12%;  /* position the top  edge of the element at the middle of the parent */
+  top: 20%;  /* position the top  edge of the element at the middle of the parent */
   left: 50%; /* position the left edge of the element at the middle of the parent */
   transform: translate(-50%, -50%);
 
@@ -148,7 +148,7 @@ html {
   }
 
   .container-title-signup {
-    display: none;
+    top: 15%;
   }
 }
 
