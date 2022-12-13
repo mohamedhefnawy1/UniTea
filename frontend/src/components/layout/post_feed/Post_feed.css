@@ -8,7 +8,6 @@
     margin-bottom: 20px;
     padding: 0px 20px;
     position: relative;
-    left: 150px;
     border: 1px solid #333;
     border-radius: 15px;
 }
@@ -135,7 +134,6 @@
         margin-top: 100px;
         padding: 0px 20px;
         position: relative;
-        left: 100px;
     }
 }
 
@@ -157,7 +155,6 @@
         margin-top: 100px;
         padding: 0px 20px;
         position: relative;
-        left: 100px;
     }
 }
 
@@ -177,7 +174,6 @@
         margin-top: 100px;
         padding: 0px 20px;
         position: relative;
-        left: 80px;
     }
 }
 
@@ -191,6 +187,5 @@
         margin-top: 100px;
         padding: 0px 20px;
         position: relative;
-        left: 60px;
     }
 }

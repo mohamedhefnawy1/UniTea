@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
 
-import './Suggested_Friend.css'
+import './Suggested_friend.css'
 
 import Follow from "../../pages/Profile/Follow";
 
@@ -13,7 +13,10 @@ function Suggested_Friend({user}) {
       <div class="rowYasta">
         <img class="imgYasta" src={user.profilePic}></img>
         <span class="userYasta">{user.username}</span>
-        <Follow user={user} class="followYasta">Follow</Follow>
+        <div className="followYasta">
+          <Follow user={user}></Follow>
+        </div>
+       
       </div>
     </div>
   );
