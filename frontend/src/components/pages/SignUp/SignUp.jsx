@@ -23,6 +23,8 @@ const SignUp = () => {
             return;
         }
         else {
+
+            // TODO: dispatch to redux
             dispatch(signUp({
                 username: username,
                 email: email,
