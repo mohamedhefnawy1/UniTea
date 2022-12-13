@@ -11,12 +11,15 @@ import { getDataAPI } from '../../../utils/fetchData'
 const Feed = () => {
 
     const [posts, setPosts] = useState([]);
+    const [suggestedUsers, setSuggestedUsers] = useState([]);
     const {auth} = useSelector(state => state)
 
     async function fetchData() {
-        const response = await getDataAPI('posts', auth.token);
-        setPosts(response.data.posts)
-        console.log(response.data.posts)
+        const postResponse = await getDataAPI('posts', auth.token);
+        const suggestedFriendsResponse = await getDataAPI('suggestionsUser', auth.token);
+        setPosts(postResponse.data.posts)
+        setSuggestedUsers(suggestedFriendsResponse.data.users)
+        console.log(postResponse.data.posts)
     }
 
     useEffect(()=>{
