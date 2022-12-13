@@ -31,7 +31,7 @@ const Feed = () => {
     return(
         <div className='row no-gutters'>
             <Navbar />
-            <div className="col-12 col-md-10 w-100">
+            <div className="col-md-10">
                 <div className="post_holder">
                     {posts.map(post=> (
                         <div className="post_feed_holder d-flex justify-content-center" key={post._id}>
@@ -42,7 +42,7 @@ const Feed = () => {
                 </div>
             </div>
             
-            <div className="col-2 d-md-none d-md-block">
+            <div className="col-2 d-md-block">
                 <div className="sidebar_holder d-flex justify-content-end">
                     <Sidebar />
                 </div>

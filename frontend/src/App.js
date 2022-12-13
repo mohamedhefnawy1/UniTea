@@ -6,6 +6,7 @@ import  SignUp  from './components/pages/SignUp/SignUp';
 import  Feed  from './components/pages/Feed/Feed';
 import Profile from './components/pages/Profile/[id]';
 import Notify from './components/notify/Notify'
+import Post from './components/pages/Post/[id]';
 import Create_post from './components/layout/create_post/Create_post';
 
 
@@ -36,6 +37,7 @@ function App() {
             <Route exact path='/logIn' element={auth.token ? <Feed/> : <LogIn />} />
             <Route exact path='/profile:id' element={auth.token ? <Profile /> : <Landing />} />
             <Route exact path='/createpost' element={auth.token ? <Create_post /> : <Landing />} />
+            <Route exact path='/post:id' element={auth.token ? <Post /> : <Landing />} />
           </Routes>
         </div>
       </Router>

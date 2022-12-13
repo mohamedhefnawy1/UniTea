@@ -114,7 +114,9 @@
 
 
 .posts img {
-    width: 98%;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
     border: 2px solid black
 }
 
