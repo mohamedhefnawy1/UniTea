@@ -1,45 +1,21 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom'
-import {useNavigate} from 'react-router-dom'
-import Info from "../../pages/Profile/Info";
+import { postDataAPI } from "../../../utils/fetchData";
 import { useSelector } from "react-redux";
 
-function Create_post() {
-    const history = useNavigate();
-    const { auth } = useSelector((state) => state);
-
+function CreatePost() {
+    const {auth} = useSelector(state => state)
     const [data, setData] = useState({
         content: "",
         image: "",
-        likes: [],
-        comments: [],
-        user: {"_id": ""},
-        _id: "",
-        __v: "",
     })
+
+    
     function create_Post() {
-
-
-        fetch(`http://localhost:4000/api/posts`, {
-            headers: {
-                'Authorization' : auth.token
-            },
-            method: 'POST',
-            body: JSON.stringify({
-                content: data.content,
-                image: data.image,
-            }),
-        })
-        .then((response) => response.json())
-        .then((result) => {
-          if(result === "Created Successfully"){
-            console.log("SUCCESS");
-          }
-          else{
-            alert("Error! All fields are required!")
-          }
-        })
+        const response = postDataAPI(`posts`, data , auth.token);
+        console.log(response.data.)    
     }
+    
     function handle(e) {
         const newData = { ...data }
         newData[e.target.id] = e.target.value
@@ -77,4 +53,4 @@ function Create_post() {
     )
 }
 
-export default Create_post
+export default CreatePost
