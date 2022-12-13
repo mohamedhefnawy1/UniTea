@@ -4,25 +4,22 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
+import { login } from '../../../redux/actions/authAction'
+import { useDispatch } from 'react-redux'
 
 const LogIn = () => {
 
-    const [username, setUsername] = React.useState('');
+    const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
+
+    const dispatch = useDispatch();
 
     function handleSubmit(event) {
         event.preventDefault();
-    
-        // fetch("/signUp", {
-        //   method: "POST",
-        //   body: JSON.stringify({ username, password }),
-        //   headers: { "Content-Type": "application/json" }
-        // })
-        //   .then(response => response.json())
-        //   .then(data => {
-        //     console.log(data);
-        //   });
-        
+        dispatch(login({
+            email: email,
+            password: password,
+        }));
         console.log(username, password);
     }
 
@@ -46,10 +43,10 @@ const LogIn = () => {
             <div className='form-container'>
                 <Form className='form' onSubmit={handleSubmit}>
                     <Form.Group controlId="formBasicUsername">
-                        <Form.Label>Username</Form.Label>
-                        <Form.Control type="text" placeholder="Enter username" value={username} onChange={
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control type="email" placeholder="Enter email" value={email} onChange={
                             (e)=> {
-                                setUsername(e.target.value);
+                                setEmail(e.target.value);
                             }
                         }/>
                     </Form.Group>
