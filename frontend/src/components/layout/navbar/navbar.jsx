@@ -10,11 +10,13 @@ import Down_btn from '../../../assets/down.png'
 
 import Searchbar from '../searchbar/Search';
 import Avatar from '../../pages/Profile/Avatar'
+import Create_post from '../create_post/Create_post'
 
 const Navbar = () => {
 
     const { auth, profile } = useSelector(state => state)
     const [User, setUser] = useState([])
+    const [showCreatePost, setShowCreatePost] = useState(false)
 
     useEffect(()=>{
         if(auth.hasOwnProperty('token')) {
@@ -44,7 +46,7 @@ const Navbar = () => {
                             <Avatar src={User.profilePic} size="medium-avatar"/>
                         </div>
                     </Link>
-                    <button id="down_btn">
+                    <button id="down_btn" onClick={() => setShowCreatePost(true)}>
                         <img className="nav_img" id="down_btn" src={Down_btn} alt="" />
                     </button>
                 </div>

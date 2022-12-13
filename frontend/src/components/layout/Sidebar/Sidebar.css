@@ -40,7 +40,7 @@
 }
 
 /* --------------------------------------------------------------------- */
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 820px) {
     .Sidebar{
         background-color: #ebebeb;
         height: 100vh;
