@@ -44,7 +44,6 @@ const Navbar = () => {
 
 
                 <div className="nav_buttons">
-                    <button id="logOut" onClick={() => logOut()}></button>
                   <Link to={`/createPost`}>
                     <button id="createPost">
                         <img className="nav_img" src={Post_img} alt="" />
@@ -55,9 +54,12 @@ const Navbar = () => {
                             <Avatar src={User.profilePic} size="medium-avatar"/>
                         </div>
                     </Link>
-                    <button id="down_btn" onClick={() => setShowCreatePost(true)}>
+                    {/* <button id="down_btn" onClick={() => setShowCreatePost(true)}>
                         <img className="nav_img" id="down_btn" src={Down_btn} alt="" />
-                    </button>
+                    </button> */}
+                    <div className="logOutHolder">
+                        <button id="logOut" onClick={() => logOut()}>Log Out</button>
+                    </div>
                 </div>
             </div>
         </div>
