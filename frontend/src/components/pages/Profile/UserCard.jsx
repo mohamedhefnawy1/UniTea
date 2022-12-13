@@ -22,9 +22,6 @@ const UserCard = ({children, user, handleClose, setShowFollowers, setShowFollowi
                     <Avatar src={user.profilePic} size="big-avatar"/>
                 </div>
                 <div className='username-text'>{user.username}</div>
-                {/* <div>
-                    <a>{user.username}</a>
-                </div> */}
             </Link>
             </div>
             

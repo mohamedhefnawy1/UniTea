@@ -58,3 +58,7 @@
     width: 30px;
     height:30px;
 }
+
+.searchBarDiv{
+    max-height: 20px;
+}

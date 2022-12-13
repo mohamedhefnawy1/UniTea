@@ -23,21 +23,14 @@ const Info = () => {
     useEffect(() => {
         if(auth.hasOwnProperty('token')) {
             
-            if(id.substring(1) === auth.user._id) {
-                setUserData([auth.user])
-            } else {
-                dispatch(getProfileUsers({users: profile.users, id, auth}))
-                const newData = profile.users.filter(user => user._id === id.substring(1))
-                if(newData.length > 0) {
-                    if(newData[0].hasOwnProperty('_id')) {
-                        setUserData([newData[0]])
-                    }
+            dispatch(getProfileUsers({users: profile.users, id, auth}))
+            const newData = profile.users.filter(user => user._id === id.substring(1))
+            if(newData.length > 0) {
+                if(newData[0].hasOwnProperty('_id')) {
+                    setUserData([newData[0]])
                 }
             }
-            
         }
-
-
     }, [id, auth, dispatch, profile.users])
 
     return (
