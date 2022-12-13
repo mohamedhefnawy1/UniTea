@@ -20,3 +20,4 @@ function Suggested_Friend({user}) {
 }
 
 export default Suggested_Friend;
+

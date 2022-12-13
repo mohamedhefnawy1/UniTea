@@ -93,3 +93,29 @@
     margin-left: 15%;
     
 }
+
+.posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  /* three columns with equal width */
+    grid-gap: 16px;  /* add a gap of 16 pixels between grid items */
+  }
+  
+  /* styles for .posts when the viewport is 600px or wider */
+  @media (max-width: 650px) {
+    .posts {
+        grid-template-columns: 1fr;
+    }
+  }
+
+  
+  .post-container {
+    /* add any additional styles for the post container here */
+  }
+
+
+.posts img {
+    width: 98%;
+    border: 2px solid black
+}
+
+

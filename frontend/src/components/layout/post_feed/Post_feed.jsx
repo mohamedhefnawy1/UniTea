@@ -35,7 +35,7 @@ const Post_feed = ({id}) => {
     }, [auth])
 
     return(
-        <div class="main_holder">
+        <div className="main_holder">
             <div className='post_head'>
                 {/* <UserCard user={postInfo.user} id='userBox' /> */}
                 

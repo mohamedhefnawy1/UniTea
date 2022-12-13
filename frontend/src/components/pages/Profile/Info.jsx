@@ -21,7 +21,9 @@ const Info = () => {
 
 
     useEffect(() => {
+
         if(auth.hasOwnProperty('token')) {    
+
             dispatch(getProfileUsers({users: profile.users, id, auth}))
             const newData = profile.users.filter(user => user._id === id.substring(1))
             if(newData.length > 0) {
@@ -31,8 +33,6 @@ const Info = () => {
             }
 
         }
-
-
     }, [id, auth, dispatch, profile.users])
 
     return (
