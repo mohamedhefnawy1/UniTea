@@ -13,15 +13,19 @@ import { getDataAPI } from '../../../utils/fetchData';
 const Sidebar = () => {
 
     const [suggestedUsers, setSuggestedUsers] = useState([]);
+    const [friends, setFriends] = useState([]);
 
     async function fetchData() {
         const suggestedFriendsResponse = await getDataAPI('suggestionsUser', auth.token);
+        const friendsResponse = await getDataAPI(`user/${auth.user._id}`, auth.token);
         setSuggestedUsers(suggestedFriendsResponse.data.users)
+        setFriends(friendsResponse.data.user.following)
     }
     
     const {auth} = useSelector(state => state)
 
     useEffect(()=>{
+        if(auth.hasOwnProperty('token'))
         fetchData();
     }, [auth])
 
@@ -29,10 +33,10 @@ const Sidebar = () => {
         <div className="Sidebar">
             <div className="user_friends">
                 <div className="user_friends_title">Friends</div>
-                <Friend />
-                <Friend />
-                <Friend />
-                <Friend />
+                {friends && friends.map(( user => (
+                        <div> <Friend following={user}/>
+                        </div>
+                )))}
             </div>
             <div className="suggested_friends">
                 <div className="suggested_friends_title">Suggested Friends</div>
