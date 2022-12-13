@@ -1,3 +1,5 @@
+// Code used to upload an image to db
+
 export const checkImage = (file) => {
     let err = ""
     if(!file) return err = "File does not exist."
