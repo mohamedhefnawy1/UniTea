@@ -1,5 +1,5 @@
 import {React, useEffect, useState }from 'react'
-import './Navbar.css'
+import './navbar.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom';
 

@@ -19,7 +19,6 @@ const Sidebar = () => {
         setSuggestedUsers(suggestedFriendsResponse.data.users)
     }
     
-    const [userInfo, setUserInfo] = useState([]);
     const {auth} = useSelector(state => state)
 
     useEffect(()=>{
@@ -37,10 +36,13 @@ const Sidebar = () => {
             </div>
             <div className="suggested_friends">
                 <div className="suggested_friends_title">Suggested Friends</div>
-                <Suggested_Friend {suggestedUsers && suggestedUsers.map(( user => {}))}/>
+                {suggestedUsers && suggestedUsers.map(( user => (
+                        <div> <Suggested_Friend user={user}/>
+                        </div>
+                )))}
+                {/* <Suggested_Friend />
                 <Suggested_Friend />
-                <Suggested_Friend />
-                <Suggested_Friend />
+                <Suggested_Friend /> */}
 
             </div>
         </div>

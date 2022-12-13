@@ -2,20 +2,21 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
 
-import './Suggested_Friend.css'
+import './Suggested_friend.css'
 
 import Follow from "../../pages/Profile/Follow";
 
-function Untitled(props) {
+function Suggested_Friend({user}) {
+  console.log(`user=${user}`);
   return (
     <div class="yasta">
       <div class="rowYasta">
-        <img class="imgYasta" src={require("../../../assets/profile_pic.png")}></img>
-        <span class="userYasta">User01</span>
-        <Follow class="followYasta">Follow</Follow>
+        <img class="imgYasta" src={user.profilePic}></img>
+        <span class="userYasta">{user.username}</span>
+        <Follow user={user} class="followYasta">Follow</Follow>
       </div>
     </div>
   );
 }
 
-export default Untitled;
+export default Suggested_Friend;
