@@ -1,7 +1,7 @@
 import React from 'react'
 import Post_feed from '../../layout/post_feed/Post_feed';
 import Sidebar from '../../layout/Sidebar/Sidebar';
-import Navbar from '../../layout/navbar/Navbar';
+import Navbar from '../../layout/navbar/navbar';
 
 
 

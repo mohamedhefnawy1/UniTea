@@ -1,64 +1,71 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import Container from 'react-bootstrap/esm/Container'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
 import { login } from '../../../redux/actions/authAction'
 import { useDispatch } from 'react-redux'
 
 const LogIn = () => {
-  const initialState = { email: "", password: "" };
-  const [userData, setUserData] = useState(initialState);
-  const { email, password } = userData;
 
-  const dispatch = useDispatch()
+    const [email, setEmail] = React.useState('');
+    const [password, setPassword] = React.useState('');
 
-  const handleChangeInput = e => {
-      const {name, value} = e.target
-      setUserData({...userData, [name]:value})
-  }
+    const dispatch = useDispatch();
 
-  const handleSubmit = e => {
-    e.preventDefault()
-    console.log(userData)
-    dispatch(login(userData)) 
-  }
+    function handleSubmit(event) {
+      event.preventDefault();
+      dispatch(login({
+          email: email,
+          password: password,
+      }));
+      console.log(email, password);
+    }
 
-  return (
+    return(
+        <>
+            <div className='white-bg'></div>
+            <Navbar bg="primary" variant="light">
+                <Container>
+                <Navbar.Brand href="/">UniTea</Navbar.Brand>
+                <Nav>
+                    <Nav.Link href="/logIn">
+                        <Button variant="outlined-primary">Login</Button>
+                    </Nav.Link>
+                    <Nav.Link href="/signUp">
+                        <Button variant="secondary">Sign Up</Button>
+                    </Nav.Link>
+                </Nav>
+                </Container>
+            </Navbar>
+            <div className='container-title-login'> Login </div>
+            <div className='form-container'>
+                <Form className='form' onSubmit={handleSubmit}>
+                    <Form.Group controlId="formBasicUsername">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control type="email" placeholder="Enter email" value={email} onChange={
+                            (e)=> {
+                                setEmail(e.target.value);
+                            }
+                        }/>
+                    </Form.Group>
 
-    <form onSubmit={handleSubmit}>
-      <h3>UniTea</h3>
+                    <Form.Group controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" placeholder="Password" value={password} onChange={
+                            (e)=> {
+                                setPassword(e.target.value);
+                            }
+                        }/>
+                    </Form.Group>
 
-      <div className="form-group">
-        <label htmlFor="exampleInputEmail1">Email</label>
-        <input
-          type="email"
-          className="form-control"
-          aria-describedby="emailHelp"
-          placeholder="Enter email"
-          onChange={handleChangeInput}
-          value = {email}
-          name = "email"
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="exampleInputPassword1">Password</label>
-        <input
-          type="password"
-          className="form-control"
-          placeholder="Password"
-          onChange={handleChangeInput}
-          value={password}
-          name = "password"
-        />
-      </div>
-      <button type="submit" className="btn btn-dark" disabled={email && password ? false : true}>
-        Login
-      </button>
-
-      <p className="my-2">
-        Dont have an account? <Link to="/register">Register Now</Link>
-      </p>
-    </form>
-  );
-};
-
-
-export default LogIn;
+                    <Button variant="secondary" type="submit">
+                        Submit
+                    </Button>
+                </Form>
+            </div>
+        </>
+    )
+}
+export default LogIn
