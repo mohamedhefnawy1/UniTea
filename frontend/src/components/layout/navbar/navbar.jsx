@@ -38,9 +38,11 @@ const Navbar = () => {
 
 
                 <div className="nav_buttons">
+                  <Link to={`/createPost`}>
                     <button id="createPost">
                         <img className="nav_img" src={Post_img} alt="" />
                     </button>
+                    </Link>
                     <Link to={`/profile:${User._id}`}>
                         <div>
                             <Avatar src={User.profilePic} size="medium-avatar"/>
