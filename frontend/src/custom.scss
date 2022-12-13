@@ -9,6 +9,10 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
+.logo {
+  width: 4em;
+}
+
 // Landing Page CSS
 
 .landing-text {
@@ -149,6 +153,10 @@ html {
 
   .container-title-signup {
     top: 15%;
+  }
+
+  .logo {
+    width: 2em;
   }
 }
 

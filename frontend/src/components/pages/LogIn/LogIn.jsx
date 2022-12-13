@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/esm/Container'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Nav from 'react-bootstrap/Nav'
+import Logo from '../../../assets/UniTea-1.png'
 import Navbar from 'react-bootstrap/Navbar'
 import { login } from '../../../redux/actions/authAction'
 import { useDispatch } from 'react-redux'
@@ -27,7 +28,7 @@ const LogIn = () => {
             <div className='white-bg'></div>
             <Navbar bg="primary" variant="light">
                 <Container>
-                <Navbar.Brand href="/">UniTea</Navbar.Brand>
+                <Navbar.Brand href="/"><img src={Logo} className="logo"></img></Navbar.Brand>
                 <Nav>
                     <Nav.Link href="/logIn">
                         <Button variant="outlined-primary">Login</Button>

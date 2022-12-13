@@ -2,6 +2,7 @@ import React from 'react'
 import Container from 'react-bootstrap/esm/Container'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import Logo from '../../../assets/UniTea-1.png'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { useDispatch } from 'react-redux'
@@ -61,7 +62,7 @@ const SignUp = () => {
             <div className='white-bg'></div>
             <Navbar bg="primary" variant="light">
                 <Container>
-                <Navbar.Brand href="/">UniTea</Navbar.Brand>
+                <Navbar.Brand href="/"><img src={Logo} className="logo"></img></Navbar.Brand>
                 <Nav>
                     <Nav.Link href="/logIn">
                         <Button variant="outlined-primary">Login</Button>

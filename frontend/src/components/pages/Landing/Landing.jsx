@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
+import Logo from '../../../assets/UniTea-1.png'
 
 
 const Landing = () => {
@@ -11,7 +12,7 @@ const Landing = () => {
         <div className='landing'>
             <Navbar bg="primary" variant="light">
                 <Container>
-                <Navbar.Brand href="/">UniTea</Navbar.Brand>
+                <Navbar.Brand href="/"><img src={Logo} className="logo"></img></Navbar.Brand>
                 <Nav>
                     <Nav.Link href="/logIn">
                         <Button variant="outlined-primary">Login</Button>
