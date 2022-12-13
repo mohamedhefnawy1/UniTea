@@ -17,7 +17,7 @@ const UserCard = ({children, user, handleClose, setShowFollowers, setShowFollowi
         <div className="d-flex p-2 align-item-center">
             <div>
             <Link to={`/profile:${user._id}`} onClick={handleCloseAll}
-                    className="d-flex align-items-center">
+                    className="d-flex align-items-center" style={{ textDecoration: 'none' }}>
                 <div>
                     <Avatar src={user.profilePic} size="big-avatar"/>
                 </div>

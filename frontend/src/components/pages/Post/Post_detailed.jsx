@@ -1,7 +1,7 @@
 import React from 'react'
 import './Post.css'
 
-import like_button from '../../../assets/heart.png'
+import like_button from '../../../assets/like1.png'
 import send_button from '../../../assets/send.png'
 import Post1 from '../../../assets/post1.jpg'
 import Post2 from '../../../assets/wallpaper.jpg'

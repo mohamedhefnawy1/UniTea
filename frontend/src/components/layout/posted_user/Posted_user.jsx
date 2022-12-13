@@ -8,8 +8,7 @@ const Posted_user = ({user}) => {
     return (
         <div className="d-flex p-2 align-item-center">
             <div>
-            <Link to={`/profile:${user._id}`}
-                    className="d-flex align-items-center">
+            <Link to={`/profile:${user._id}`} className="d-flex align-items-center" style={{ textDecoration: 'none' }}>
                 <div>
                     <Avatar src={user.profilePic} size="big-avatar"/>
                 </div>
