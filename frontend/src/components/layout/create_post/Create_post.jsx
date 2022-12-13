@@ -13,7 +13,6 @@ function CreatePost() {
     
     function create_Post() {
         const response = postDataAPI(`posts`, data , auth.token);
-        console.log(response.data.)    
     }
     
     function handle(e) {
