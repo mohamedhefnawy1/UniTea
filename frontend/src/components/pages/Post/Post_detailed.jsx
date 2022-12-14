@@ -55,6 +55,7 @@ const Post_detailed = ({id}) => {
             <div className='bio_box'>
                 {postInfo.content}
             </div>
+            <Comment postInfo= {postInfo.comments}> </Comment>
             <div className='post_footer'>
                 {/* <input className="add_comment_box">Add comment</input> */}
                 

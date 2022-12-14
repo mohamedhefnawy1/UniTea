@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
 
-function Comment(props) {
+function Comment(postInfo) {
+  const postInfoParsed = postInfo.postInfo[0].content
+  console.log(postInfoParsed)
   return (
     <Rect>
       <User01Row>
         <User01>User01</User01>
         <LoremIpsum>:</LoremIpsum>
-        <ThisIsAComment>This is a comment</ThisIsAComment>
+        <ThisIsAComment>{postInfoParsed}</ThisIsAComment>
       </User01Row>
     </Rect>
   );
