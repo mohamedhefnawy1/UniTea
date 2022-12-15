@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { useDispatch } from 'react-redux'
+import Logo from '../../../assets/UniTea-1.png'
 
 const SignUp = () => {
 
@@ -21,10 +22,6 @@ const SignUp = () => {
 
         if(password !== confirmPassword) {
             alert("Passwords do not match");
-            return;
-        }
-        else if(email.includes('@ucalgary.ca') === false) {
-            alert("Please use a UCalgary email");
             return;
         }
         else {
@@ -63,7 +60,9 @@ const SignUp = () => {
             <div className='white-bg'></div>
             <Navbar bg="primary" variant="light">
                 <Container>
-                <Navbar.Brand href="/">UniTea</Navbar.Brand>
+                <Navbar.Brand href="/">
+                <img className="logo" src={Logo} alt="" />
+                </Navbar.Brand>
                 <Nav>
                     <Nav.Link href="/logIn">
                         <Button variant="outlined-primary">Login</Button>

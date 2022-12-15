@@ -12,7 +12,9 @@ const Landing = () => {
         <div className='landing'>
             <Navbar bg="primary" variant="light">
                 <Container>
-                <Navbar.Brand href="/">UniTea</Navbar.Brand>
+                <Navbar.Brand href="/">
+                    <img className="logo" src={Logo} alt="" />
+                </Navbar.Brand>
                 <Nav>
                     <Nav.Link href="/logIn">
                         <Button variant="outlined-primary">Login</Button>

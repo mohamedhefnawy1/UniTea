@@ -18,6 +18,7 @@ function CreatePost() {
     
     function create_Post() {
         const response = postDataAPI(`posts`, data , auth.token);
+
         navigate("/")
     }
     

@@ -38,6 +38,7 @@ const EditProfile = ({user, setOnEdit}) => {
         .catch((err) => {console.log(err)})
 
         window.location.reload(false)
+        
     }
 
 
