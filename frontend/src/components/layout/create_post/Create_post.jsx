@@ -46,9 +46,6 @@ function CreatePost() {
                         <div className="submit_btn_holder">
                             <button className='submitBtn' type="button" onClick={() => create_Post()}>Submit</button>
                         </div>
-
-
-
                     </form>
                 </div>
 

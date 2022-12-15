@@ -14,7 +14,7 @@ import Comment from '../comment/Comment'
 import Posted_user from '../posted_user/Posted_user'
 
 import { useSelector } from 'react-redux';
-import { getDataAPI, postDataAPI } from '../../../utils/fetchData'
+import { getDataAPI, postDataAPI , patchDataAPI} from '../../../utils/fetchData'
 import { useEffect,useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -45,19 +45,24 @@ const Post_feed = ({id}) => {
         console.log(newData)
     }
 
-    let bool = 0;
-    function toggleImage(e)
-    {
-        console.log(document.getElementById("like_img").src)
-        if(bool == 0){
-            document.getElementById("like_img").src=like_button2;
-            bool = 1
-        }
-        else{
-            document.getElementById("like_img").src = like_button
-            bool = 0
-        }
+    // let bool = 0;
+    // function toggleLike(e)
+    // {
+    //     console.log(document.getElementById("like_img").src)
+    //     if(bool == 0){
+    //         document.getElementById("like_img").src=like_button2;
+    //         bool = 1
+    //     }
+    //     else{
+    //         document.getElementById("like_img").src = like_button
+    //         bool = 0
+    //     }
        
+    // }
+
+    function toggleLike(){
+        let res = patchDataAPI(`post/${id}/like`, {}, auth.token);
+        console.log("response = "+ res);
     }
 
     async function fetchData() {
@@ -86,7 +91,7 @@ const Post_feed = ({id}) => {
                     </Link>     */}
                 </div>
                 <div className="like_button_holder">
-                    <button onClick={()=>toggleImage()}id='like_button'><img id='like_img' src={like_button} alt="" /></button>
+                    <button onClick={()=>toggleLike()}id='like_button'><img id='like_img' src={like_button} alt="" /></button>
                     {/* <img src="https://i.stack.imgur.com/ZUcU8.jpg" id="like_button"/> */}
                 </div>
             </div>
