@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { login } from '../../../redux/actions/authAction'
 import { useDispatch } from 'react-redux'
+import Logo from '../../../assets/UniTea-1.png'
 
 const LogIn = () => {
 
@@ -27,7 +28,9 @@ const LogIn = () => {
             <div className='white-bg'></div>
             <Navbar bg="primary" variant="light">
                 <Container>
-                <Navbar.Brand href="/">UniTea</Navbar.Brand>
+                <Navbar.Brand href="/">
+                    <img src={Logo} alt="" className="logo" />
+                </Navbar.Brand>
                 <Nav>
                     <Nav.Link href="/logIn">
                         <Button variant="outlined-primary">Login</Button>

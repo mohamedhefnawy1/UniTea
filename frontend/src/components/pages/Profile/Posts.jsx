@@ -15,7 +15,7 @@ const Posts = () => {
     async function fetchData() {
         console.log(id.substring(1))
         const response = await getDataAPI(`user_posts/${id.substring(1)}`, auth.token);
-        setPosts(response.data.posts)
+        setPosts(response.data.posts.reverse())
     }
 
 

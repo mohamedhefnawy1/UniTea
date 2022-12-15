@@ -27,7 +27,7 @@ const Feed = () => {
         if(auth.hasOwnProperty("token")){
             fetchData();
         }
-    }, [auth])
+    }, [])
 
     return(
         <div className='row no-gutters'>
