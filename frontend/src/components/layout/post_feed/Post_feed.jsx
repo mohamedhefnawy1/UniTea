@@ -23,6 +23,8 @@ const Post_feed = ({id}) => {
 
     const [postInfo, setPostInfo] = useState([]);
     const [Like, setLike] = useState([]);
+    const [LikeCounter, setLikeCounter] = useState([]);
+    const [commentCounter, setCommentCounter] = useState([]);
     const {auth} = useSelector(state => state)
 
     const [comment, setComment] = useState({
@@ -62,20 +64,25 @@ const Post_feed = ({id}) => {
 
     function toggleLike(){
         let res = patchDataAPI(`post/${id}/like`, {}, auth.token);
-        console.log("response = "+ res);
     }
 
     async function fetchData() {
         // console.log(id)
-
         const response = await getDataAPI(`post/${id}`, auth.token);
         setPostInfo(response.data.post)
-        console.log(response.data.post)
+        setLikeCounter(response.data.post.likes.length)
+        setCommentCounter(response.data.post.comments.length)
+        // console.log(response.data.post)
     }
 
     useEffect(()=>{
         fetchData();
     }, [auth])
+
+    // let numOfLikes = postInfo.likes.length
+    // console.log("postInfo = "+ postInfo.likes.length)
+
+    // const numOfLikes = postInfo.likes.length
 
     return(
         <div className="main_holder">
@@ -102,6 +109,7 @@ const Post_feed = ({id}) => {
             </div>
             <div className='bio_box'>
                 {postInfo.content}
+                
             </div>
             <div className='post_footer'>
                 {/* <input className="add_comment_box">Add comment</input> */}
@@ -112,8 +120,8 @@ const Post_feed = ({id}) => {
                     <button onClick={() => create_Comment()} id='send_button'><img id='send_img' src={send_button} alt="" /></button>
                 </div>
                 <div className="footerInfoHolder">
-                    <div className="numberOfLikes">Likes</div>
-                    <div className="numberOfComments">Comments</div>
+                    <div className="numberOfLikes">{LikeCounter} Likes</div>
+                    <div className="numberOfComments">{commentCounter} Comments</div>
                 </div>
                 
             </div>
