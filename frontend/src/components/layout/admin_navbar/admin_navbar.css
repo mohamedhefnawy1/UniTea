@@ -1,0 +1,86 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  background-color: #ff4747;
+  position: fixed;
+  top: 0px;
+  /* position: absolute; */
+  z-index: 1;
+}
+
+.logo_holder {
+  padding-left: 50px;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+}
+
+#createPost {
+  width: auto;
+  height: auto;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.nav_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 50px;
+}
+
+#nav_profile_btn {
+  width: auto;
+  height: auto;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#down_btn {
+  width: 15px;
+  height: 15px;
+  background: none;
+  border: none;
+  position: relative;
+  bottom: 3px;
+  outline: none;
+}
+
+.nav_img {
+  width: 30px;
+  height: 30px;
+}
+
+/* ---------------------------------------------------- */
+@media screen and (max-width: 950px) {
+  .logo_holder {
+    padding-left: 0px;
+  }
+
+  .nav_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+  }
+
+  #createPost {
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+    outline: none;
+    position: relative;
+    right: 10px;
+  }
+}
+
+.searchBarDiv {
+  max-height: 20px;
+}

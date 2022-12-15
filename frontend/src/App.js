@@ -7,6 +7,8 @@ import  Feed  from './components/pages/Feed/Feed';
 import Profile from './components/pages/Profile/[id]';
 import Notify from './components/notify/Notify'
 import Create_post from './components/layout/create_post/Create_post';
+import AdminFeed from './components/pages/Admin_Feed/AdminFeed';
+import Admin_Post_Feed from './components/layout/admin_post_feed/Admin_Post_Feed.jsx';
 
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
