@@ -28,11 +28,19 @@ const EditProfile = ({user, setOnEdit}) => {
 
     const handleSubmit = e => {
         e.preventDefault();
+        let profilePicForAPI;
+        if(userData.profilePic) {
+            profilePicForAPI = userData.profilePic
+            console.log(profilePicForAPI)
+        } else {
+            profilePicForAPI = "https://cdn.discordapp.com/attachments/1032006385732427801/1048099176434647100/user.png"
+        }
+
         console.log(userData.username)
         patchDataAPI(`user`, {
             story: userData.story,
             username: userData.username,
-            profilePic: userData.profilePic
+            profilePic: profilePicForAPI
         }, auth.token)
         .then((response) => console.log(response))
         .catch((err) => {console.log(err)})

@@ -2,6 +2,7 @@ import React from 'react'
 import './Post.css'
 
 import like_button from '../../../assets/like1.png'
+import like_button2 from '../../../assets/like2.png'
 import send_button from '../../../assets/send.png'
 import Post1 from '../../../assets/post1.jpg'
 import Post2 from '../../../assets/wallpaper.jpg'
@@ -15,20 +16,24 @@ import { useSelector } from 'react-redux';
 import { getDataAPI } from '../../../utils/fetchData'
 import { useEffect,useState } from 'react'
 import { Link } from 'react-router-dom'
-import { postDataAPI } from '../../../utils/fetchData'
+import { postDataAPI, patchDataAPI } from '../../../utils/fetchData'
+
 
 
 const Post_detailed = ({id}) => {
 
     const [postInfo, setPostInfo] = useState([]);
     const {auth} = useSelector(state => state)
+    const [LikeCounter, setLikeCounter] = useState([]);
+    const [commentCounter, setCommentCounter] = useState([]);
 
     async function fetchData() {
         console.log(id)
 
         const response = await getDataAPI(`post/${id}`, auth.token);
         setPostInfo(response.data.post)
-        console.log(response.data.post)
+        setLikeCounter(response.data.post.likes.length)
+        setCommentCounter(response.data.post.comments.length)
     }
 
     useEffect(()=>{
@@ -57,6 +62,23 @@ const Post_detailed = ({id}) => {
         console.log(newData)
     }
 
+    let bool = 0;
+    function toggleLike()
+    {
+        console.log(document.getElementById("like_img").src)
+
+        if(bool == 0){
+            document.getElementById("like_img").src=like_button2;
+            patchDataAPI(`post/${id}/like`, {}, auth.token);
+            bool = 1
+        }
+        else{
+            document.getElementById("like_img").src = like_button
+            patchDataAPI(`post/${id}/unlike`, {}, auth.token);
+            bool = 0
+        }
+    }
+
     return(
         <div className="main_holder">
             <div className='post_head'>
@@ -68,7 +90,7 @@ const Post_detailed = ({id}) => {
 
                 </div>
                 <div className="like_button_holder">
-                    <button id='like_button'><img id='like_img' src={like_button} alt="" /></button>
+                    <button id='like_button' onClick={()=>toggleLike()}><img id='like_img' src={like_button} alt="" /></button>
                 </div>
             </div>
             <div className='post_body'>
@@ -95,8 +117,8 @@ const Post_detailed = ({id}) => {
                     <button id='send_button' onClick={() => create_Comment()} ><img id='send_img' src={send_button} alt="" /></button>
                 </div>
                 <div className="footerInfoHolder">
-                    <div className="numberOfLikes">Likes</div>
-                    <div className="numberOfComments">Comments</div>
+                    <div className="numberOfLikes">{LikeCounter} Likes</div>
+                    <div className="numberOfComments">{commentCounter} Comments</div>
                 </div>
                 
             </div>

@@ -1,0 +1,18 @@
+.username-comment p{
+    padding-top: 5px;
+    color: black;
+    text-emphasis: 300;
+
+}
+
+.content-comment {
+    padding-top: 8px;
+
+
+}
+
+.comment-main-holder {
+    border-bottom: 1px dotted black;
+    padding-bottom: 5px;
+
+}

@@ -3,13 +3,13 @@
     width: inherit;
     min-width: 700px;
     max-width: 30rem;
-    background-color: #00747042;
     margin-top: 120px;
     margin-bottom: 20px;
     padding: 0px 20px;
     position: relative;
     border: 1px solid #333;
     border-radius: 15px;
+    background-color: #0074706e;
 }
 
 .post_head{

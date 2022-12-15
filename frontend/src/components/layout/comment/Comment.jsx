@@ -1,22 +1,35 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
 import Avatar from "../../pages/Profile/Avatar";
+import { Link } from "react-router-dom";
+import './Comment.css'
 
-function Comment({commentInfo}) {
-
-
+function Comment({ commentInfo }) {
   return (
-    <Rect>
-      <User01Row>
-        <div className="img-cig">
-          <Avatar src={commentInfo.user.profilePic} size="small-avatar" /> 
-          
-        </div>
-        <User01>{commentInfo.user.username}</User01>
-        <LoremIpsum>:</LoremIpsum>
-        <ThisIsAComment>{commentInfo.content}</ThisIsAComment>
-      </User01Row>
-    </Rect>
+    <div className="comment-main-holder">
+      <Rect>
+        <User01Row>
+          <div className="img-comment">
+          <Link to={`/profile:${commentInfo.user._id}`} style={{ textDecoration: 'none'}}>
+            <Avatar src={commentInfo.user.profilePic} size="comment-avatar" />
+          </Link>
+          </div>
+          <User01>
+          <Link to={`/profile:${commentInfo.user._id}`} style={{ textDecoration: 'none' }}>
+            <div className="username-comment">
+                <p>
+                {commentInfo.user.username}:
+              </p>
+            </div>
+          </Link>
+          </User01>
+          <ThisIsAComment>
+            <div className="content-comment">{commentInfo.content}</div>
+          </ThisIsAComment>
+        </User01Row>
+      </Rect>
+
+    </div>
   );
 }
 
@@ -24,7 +37,7 @@ const Rect = styled.div`
   display: flex;
   width: auto;
   height: 46px;
-  background-color: #E6E6E6;
+
   flex-direction: row;
   margin-top: 0px;
   margin-left: 0px;
