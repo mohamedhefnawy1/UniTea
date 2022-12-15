@@ -47,23 +47,21 @@ const Post_feed = ({id}) => {
         console.log(newData)
     }
 
-    // let bool = 0;
-    // function toggleLike(e)
-    // {
-    //     console.log(document.getElementById("like_img").src)
-    //     if(bool == 0){
-    //         document.getElementById("like_img").src=like_button2;
-    //         bool = 1
-    //     }
-    //     else{
-    //         document.getElementById("like_img").src = like_button
-    //         bool = 0
-    //     }
-       
-    // }
+    let bool = 0;
+    function toggleLike()
+    {
+        console.log(document.getElementById("like_img").src)
 
-    function toggleLike(){
-        let res = patchDataAPI(`post/${id}/like`, {}, auth.token);
+        if(bool == 0){
+            document.getElementById("like_img").src=like_button2;
+            patchDataAPI(`post/${id}/like`, {}, auth.token);
+            bool = 1
+        }
+        else{
+            document.getElementById("like_img").src = like_button
+            patchDataAPI(`post/${id}/unlike`, {}, auth.token);
+            bool = 0
+        }
     }
 
     async function fetchData() {
