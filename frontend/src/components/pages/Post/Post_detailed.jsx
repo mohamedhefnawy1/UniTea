@@ -15,6 +15,7 @@ import { useSelector } from 'react-redux';
 import { getDataAPI } from '../../../utils/fetchData'
 import { useEffect,useState } from 'react'
 import { Link } from 'react-router-dom'
+import { postDataAPI } from '../../../utils/fetchData'
 
 
 const Post_detailed = ({id}) => {
@@ -33,6 +34,28 @@ const Post_detailed = ({id}) => {
     useEffect(()=>{
         fetchData();
     }, [auth])
+
+        
+
+    const [comment, setComment] = useState({
+        postId: id,
+        content: "",
+        tag: ""
+    })
+
+    
+    function create_Comment() {
+        const response = postDataAPI(`comment`, comment , auth.token);
+        window.location.reload(false)
+
+    }
+    
+    function handle(e) {
+        const newData = { ...comment }
+        newData[e.target.id] = e.target.value
+        setComment(newData)
+        console.log(newData)
+    }
 
     return(
         <div className="main_holder">
@@ -55,13 +78,21 @@ const Post_detailed = ({id}) => {
             <div className='bio_box'>
                 {postInfo.content}
             </div>
-            {/* <Comment postInfo= {postInfo.comments}> </Comment> */}
+            <div className="comment-box">
+                {
+                    postInfo.comments && postInfo.comments.map(comment => (
+                        <Comment commentInfo={comment} />
+                    ))
+                }
+
+            </div>
             <div className='post_footer'>
+                {/* {postInfo.commentpostInfo.comments[0]} */}
                 {/* <input className="add_comment_box">Add comment</input> */}
                 
                 <div className="comment_holder">
-                    <input type="text" id="comment_box" name="name" requiredminlength="15" placeholder='Add Comment!' size="25"></input>
-                    <button id='send_button'><img id='send_img' src={send_button} alt="" /></button>
+                    <input onChange={(e) => handle(e)} type="text" id="content" name="name" requiredminlength="15" placeholder='Add Comment!' size="25"></input>
+                    <button id='send_button' onClick={() => create_Comment()} ><img id='send_img' src={send_button} alt="" /></button>
                 </div>
                 <div className="footerInfoHolder">
                     <div className="numberOfLikes">Likes</div>

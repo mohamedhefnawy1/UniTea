@@ -32,7 +32,7 @@ const LogIn = () => {
                     <img src={Logo} alt="" className="logo" />
                 </Navbar.Brand>
                 <Nav>
-                    <Nav.Link href="/logIn">
+                    <Nav.Link href="/">
                         <Button variant="outlined-primary">Login</Button>
                     </Nav.Link>
                     <Nav.Link href="/signUp">
