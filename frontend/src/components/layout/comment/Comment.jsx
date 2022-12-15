@@ -1,15 +1,20 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
+import Avatar from "../../pages/Profile/Avatar";
 
-function Comment(postInfo) {
-  const postInfoParsed = postInfo.postInfo[0].content
-  console.log(postInfoParsed)
+function Comment({commentInfo}) {
+
+
   return (
     <Rect>
       <User01Row>
-        <User01>User01</User01>
+        <div className="img-cig">
+          <Avatar src={commentInfo.user.profilePic} size="small-avatar" /> 
+          
+        </div>
+        <User01>{commentInfo.user.username}</User01>
         <LoremIpsum>:</LoremIpsum>
-        <ThisIsAComment>{postInfoParsed}</ThisIsAComment>
+        <ThisIsAComment>{commentInfo.content}</ThisIsAComment>
       </User01Row>
     </Rect>
   );
